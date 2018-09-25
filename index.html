@@ -10,35 +10,74 @@
     <link rel="stylesheet" href="./lib/iconic/css/open-iconic-bootstrap.css">
     <link rel="stylesheet" href="./css/main.css">
 
-    <title>Supermail</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>SuperMail</title>
   </head>
   <body>
-    <header>
-        <div class="topbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <span class="oi oi-signal" title="signal" aria-hidden="true">First Column</span>
-                    </div>
-                    <div class="col-md-6">
-                        <span>Second Column</span>
-                    </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="index.html"><img src="./img/logo.png" alt="supermail"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Delivery Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Map for The Stores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Insurance</a>
+                </li>
+            </ul>
             </div>
+        </nav>
+        <div id="postpicture">
+            <p>A picture of hills.</p>
         </div>
-        <div class="nav"></div>
-    </header>
 
+        <div id="information">
+            <div class="row">
+                <span class="col-sm-1"></span>
+                <p class="text-white">Supermail</p>
+            </div>
+            <ul class="list-group">
+                <li >Auckland</li>
+                <li >Queenstwon</li>
+                <li >Dunedin</li>
+                <li >Invercargill</li>
+            </ul>
+        </div>
+        <footer>
 
-
-    <footer>
-
-    </footer>
+        </footer>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./lib/jquery/jquery.slim.min.js"></script>
-    <script src="./lib/popper/popper.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./lib/popper/popper.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

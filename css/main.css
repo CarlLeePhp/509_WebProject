@@ -1,7 +1,4 @@
-nav {
-    height: 100px;
 
-}
 
 /*
 * Body
@@ -11,13 +8,22 @@ nav {
 /**
 * Header
 */
-
-header {
-    height: 200px;
-    background-color: bisque;
+#postpicture {
+    height: 240px;
+    background-color: aquamarine;
 }
 
-header > .topbar {
-    height: 40px;
-    border-bottom: 1px solid #c0c0c0;
+
+#information {
+    height: 300px;
+    background-color: #808080;
+}
+
+/*
+* Footer
+*/
+
+footer{
+    height: 60px;
+    background-color: #1c1c1c;
 }
