@@ -1,0 +1,23 @@
+nav {
+    height: 100px;
+
+}
+
+/*
+* Body
+*/
+
+
+/**
+* Header
+*/
+
+header {
+    height: 200px;
+    background-color: bisque;
+}
+
+header > .topbar {
+    height: 40px;
+    border-bottom: 1px solid #c0c0c0;
+}
