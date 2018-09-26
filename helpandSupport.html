@@ -18,26 +18,38 @@
     <br>
     <br>
     <div class="container-fluid">
+        
+        <!-- Components > Nav > The tabs plugs with vertical pills -->
         <div class="row">
-            <button class="btn btn-primary col-sm-2" type="button" data-toggle="collapse" data-target="#helpList" aria-expanded="false" aria-controls="helpList">
-                Help & Support
-            </button>
-        </div>
-        <div class="row">
-            <div class="collapse col-sm-2" id="helpList">
-                <ul class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#customer" aria-expanded="false" aria-controls="customer">Customer Support</a>
-                    <a href="#" class="list-group-item list-group-item-action">Office & </a>
-                    <a href="#" class="list-group-item list-group-item-action">Courier Location </a>
-                    <a href="#" class="list-group-item list-group-item-action">Service</a>
-                    <a href="#" class="list-group-item list-group-item-action">File & Picture</a>
-                    <a href="#" class="list-group-item list-group-item-action">Bill Payment</a>
-                </ul> 
+            <div class="col-3">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-customer-tab" data-toggle="pill" href="#v-pills-customer" role="tab" aria-controls="v-pills-customer" aria-selected="true">Customer Support</a>
+                <a class="nav-link" id="v-pills-office-tab" data-toggle="pill" href="#v-pills-office" role="tab" aria-controls="v-pills-office" aria-selected="false">Office & Facility</a>
+                <a class="nav-link" id="v-pills-courier-tab" data-toggle="pill" href="#v-pills-courier" role="tab" aria-controls="v-pills-courier" aria-selected="false">Courier Location</a>
+                <a class="nav-link" id="v-pills-service-tab" data-toggle="pill" href="#v-pills-service" role="tab" aria-controls="v-pills-service" aria-selected="false">Service</a>
+              </div>
             </div>
-            <div class="col-sm-10 collapse" id="customer">
-                <p>Customer Support description will be here.</p>
+            <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-customer" role="tabpanel" aria-labelledby="v-pills-customer-tab">
+                    <h4>Customer Support</h4>
+                    <p>Customer could do something, Customer could do something, Customer could do something.</p>
+                </div>
+                <div class="tab-pane fade" id="v-pills-office" role="tabpanel" aria-labelledby="v-pills-office-tab">
+                    <h4>Office & Facility</h4>
+                    <p>Customer could do something, Customer could do something, Customer could do something.</p>
+                </div>
+                <div class="tab-pane fade" id="v-pills-courier" role="tabpanel" aria-labelledby="v-pills-courier-tab">
+                    <h4>Courier Location</h4>
+                    <p>Customer could do something, Customer could do something, Customer could do something.</p>
+                </div>
+                <div class="tab-pane fade" id="v-pills-service" role="tabpanel" aria-labelledby="v-pills-service-tab">
+                    <h4>Service</h4>
+                    <p>Customer could do something, Customer could do something, Customer could do something.</p>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
 
     </div>
 
