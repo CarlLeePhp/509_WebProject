@@ -8,9 +8,29 @@
 /**
 * Header
 */
+
+header {
+    height: 100px;
+    
+}
+
+nav {
+    /*background-color: #e8e8e6;*/
+    /*background-color: #351c15;*/
+    
+}
+
+nav a img {
+    width: 40%;
+    height: 40%;
+    padding-left: 150px;
+}
+
 #postpicture {
     height: 240px;
-    background-color: aquamarine;
+    background-image: url(../img/headerPIC.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
