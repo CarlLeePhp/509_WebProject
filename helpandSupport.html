@@ -18,13 +18,15 @@
     <br>
     <br>
     <div class="container-fluid">
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#helpList" aria-expanded="false" aria-controls="helpList">
-            Help & Support
-        </button>
+        <div class="row">
+            <button class="btn btn-primary col-sm-2" type="button" data-toggle="collapse" data-target="#helpList" aria-expanded="false" aria-controls="helpList">
+                Help & Support
+            </button>
+        </div>
         <div class="row">
             <div class="collapse col-sm-2" id="helpList">
                 <ul class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Custome Support</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#customer" aria-expanded="false" aria-controls="customer">Customer Support</a>
                     <a href="#" class="list-group-item list-group-item-action">Office & </a>
                     <a href="#" class="list-group-item list-group-item-action">Courier Location </a>
                     <a href="#" class="list-group-item list-group-item-action">Service</a>
@@ -32,8 +34,8 @@
                     <a href="#" class="list-group-item list-group-item-action">Bill Payment</a>
                 </ul> 
             </div>
-            <div class="col-sm-10">
-                <p>Something Will be here.</p>
+            <div class="col-sm-10 collapse" id="customer">
+                <p>Customer Support description will be here.</p>
             </div>
         </div>
 

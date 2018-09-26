@@ -15,15 +15,15 @@ header {
 }
 
 nav {
-    /*background-color: #e8e8e6;*/
-    /*background-color: #351c15;*/
+    background-color: #14353d;
+
     
 }
 
 nav a img {
     width: 40%;
     height: 40%;
-    padding-left: 150px;
+    /*padding-left: 150px;*/
 }
 
 #postpicture {
