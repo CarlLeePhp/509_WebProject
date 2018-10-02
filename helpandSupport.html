@@ -17,34 +17,24 @@
 </head>
 
 <body>
-    <br>
-    <br>
     <div class="container-fluid">
         <!-- Navbar Type A -->
+        <!-- ml: margin left, mr: margin right -->
+        <!-- Give align-self-end to div #navbarSupportedContent makes the nav align bottom of navbar -->
+
         <nav class="navbar navbar-expand-lg navbar-dark">
 
-            <a class="navbar-brand" href="index.html"><img src="./img/logo.png" class="img-fluid" width="210" height="100"
+            <a class="navbar-brand" href="index.html"><img src="./img/logo.png" class="img-fluid" width="128" height="64"
                     alt="supermail"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse align-self-end flex-column" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white font-weight-bold" href="./helpandSupport.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white font-weight-bold" href="./helpandSupport.html">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white font-weight-bold" href="./helpandSupport.html">Location</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white font-weight-bold" href="./helpandSupport.html">English</a>
-                    </li>
-                </ul>
+
+
+            <div class="collapse navbar-collapse align-self-end" id="navbarSupportedContent">
+
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item dropdown">
@@ -126,10 +116,13 @@
             </div>
         </nav>
 
-        <br>
-        <br>
 
+    </div>
+
+    <!-- Content -->
+    <main class="container-fluid" >
         <!-- Components > Nav > The tabs plugs with vertical pills -->
+        <div class="d-none d-md-block m-5"></div>
         <div class="row">
             <div class="col-md-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -143,7 +136,7 @@
                         aria-controls="v-pills-service" aria-selected="false">Service</a>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9" style="height: 300px;">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-customer" role="tabpanel" aria-labelledby="v-pills-customer-tab">
                         <h4>Customer Support</h4>
@@ -165,7 +158,38 @@
             </div>
         </div>
 
+    </main>
+    <!-- Content End -->
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+        <!-- Mobile & Computer -->
+        <div class="d-flex flex-column flex-md-row pt-2 text-white justify-content-around">
+            <div class="m-1 p-1 col-md-2" style="background-color: rgba(255, 255, 255, 0.1)">
+                <p>Company Address & Contact Center</p>
+            </div>
+            <div class="m-1 p-1 col-md-2" style="background-color: rgba(255, 255, 255, 0.1)">
+                <p>Branches</p>
+                <p>Queenstown, Dunedin, Christchurch, Wellington, Aucland, Sidney, Perth</p>
+            </div>
+            <div class="m-1 p-1 col-md-2" style="background-color: rgba(255, 255, 255, 0.1)">
+                <p>Connecting</p>
+                <p>1. Customer Service</p>
+                <p>2. Carieer</p>
+            </div>
+            <div class="m-1 p-1 col-md-2" style="background-color: rgba(255, 255, 255, 0.1)">
+                <p>Company Partner</p>
+                <p>Logos</p>
+            </div>
+            <div class="m-1 p-1 col-md-2" style="background-color: rgba(255, 255, 255, 0.1)">
+                <p>Links To</p>
+                <p>Facebook</p>
+                <p>Youtube</p>
+            </div>
+        </div>
+        <div class="d-flex flex-row pr-4 pb-1 justify-content-end text-white">&copy; Supermail 2018</div>
     </div>
+    <!-- Footer End -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

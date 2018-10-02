@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/iconic/css/open-iconic-bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Help and Support</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid" id="main">
+        <!-- Input Text-->
+        <input type="text" v-model="packageID" placeholder="Package ID">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" @click="btnHandler">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" v-text="result">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer End -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./lib/jquery/jquery.slim.min.js"></script>
+    <script src="./lib/popper/popper.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/vue/vue-2.4.0.js"></script>
+
+    <script>
+        var vm = new Vue({
+            el: '#main',
+            data: {
+                packageID: "",
+                result: "",
+
+            },
+            methods: {
+                btnHandler() {
+                    var situations = {
+                        sm001: "Package arrived Invercargill at 29 September 2018",
+                        sm002: "Package arrived Auckland at 30 September 2018"
+                    }
+
+                    if (this.packageID == "") {
+                        this.result = "Package ID cannot be empty!";
+                        return;
+                    } else if (situations[this.packageID]) {
+                        this.result = situations[this.packageID];
+                    } else {
+                        this.result="Sorry, this Package ID is not exisit!";
+                    }
+                }
+            }
+
+        })
+
+    </script>
+
+</body>
+
+</html>

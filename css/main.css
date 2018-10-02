@@ -45,7 +45,6 @@ nav {
 * Footer
 */
 
-footer{
-    height: 60px;
-    background-color: #1c1c1c;
+#footer > div {
+    background-color: #14353d;
 }
