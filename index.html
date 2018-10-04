@@ -159,9 +159,9 @@
         <div class="d-md-none" style="background-image: url('./img/background.jpg'); background-position: center; background-size: cover;">
             <div class="d-flex flex-column p-2">
                 <h2 class="text-white pt-3">FAST TRACKING</h2>
-                <input type="text" name="" placeholder="Package ID" v-model="packageID">
+                <input type="text" name="" placeholder="Package ID" v-model="packageID" id="IDm">
                 <br>
-                <input type="button" class="btn btn-success" data-toggle="modal" data-target="#mobileModal" value="FIND" @click="btnHandler">
+                <input type="button" class="btn btn-success" data-toggle="modal" data-target="#mobileModal" value="FIND" @click="btnHandler" id="btnm">
             </div>
 
 
@@ -211,9 +211,9 @@
             <div class="d-flex flex-row mt-5"></div>
             <div class="d-flex flex-column">
                 <h2 class="text-white pt-3 offset-md-3 col-md-6 text-center">FAST TRACKING</h2>
-                <input class="offset-md-4 col-md-4" type="text" placeholder="Package ID" v-model="packageID">
+                <input class="offset-md-4 col-md-4" type="text" placeholder="Package ID" v-model="packageID" id="IDc">
                 <br>
-                <input type="button" class="btn btn-success offset-md-5 col-md-2" value="FIND" data-toggle="modal" data-target="#computerModal" @click="btnHandler">
+                <input type="button" class="btn btn-success offset-md-5 col-md-2" value="FIND" data-toggle="modal" data-target="#computerModal" @click="btnHandler" id="btnc">
             </div>
 
             <!-- Modal -->
@@ -297,6 +297,7 @@
     <script src="./lib/popper/popper.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/vue/vue-2.4.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 
     <script>
         var vm = new Vue({
@@ -308,23 +309,29 @@
             methods: {
                 // Onclick event for the button
                 btnHandler() {
-                    // Data is stored in an object
-                    var situations = {
-                        sm001: "Package arrived Invercargill at 29 September 2018",
-                        sm002: "Package arrived Auckland at 30 September 2018"
-                    }
-                    if (this.packageID == "") {
-                        this.result = "Package ID cannot be empty!";
-                        return;
-                    } else if (situations[this.packageID]) {
-                        this.result = situations[this.packageID];
-                    } else {
-                        this.result="Sorry, this ID is not exist!";
-                    }
+                    // 
+                    var urllink = 'http://localhost/data.php?packageID=' + this.packageID
+                    this.$http.get(urllink).then(res => {
+                        this.result = res.body
+                    }, res => {
+                        this.result = res
+                    })                    
                 }
             }
         })
 
+        // I do not want to use jQuery, but I can not find how to address it by Vue.js
+        $("#IDc").keyup(function(event) {
+            if (event.keyCode === 13){
+                $("#btnc").click();
+            }
+        });
+
+        $("#IDm").keyup(function(event) {
+            if (event.keyCode === 13){
+                $("#btnm").click();
+            }
+        });
     </script>
 </body>
 
