@@ -1,12 +1,9 @@
 <?php
-// database supermail
-// user supermail
-// KxtG]ysYC-8<fgY
-
+include '../conf_supermail.php';
 // connet database
 // mysqli('server', 'username', 'password', 'databasename')
 // @ 通常用在函数前，阻止错误信息显示
-$db = @new mysqli('localhost', 'supermail', 'KxtG]ysYC-8<fgY', 'supermail' );
+$db = @new mysqli('localhost', $db_user, $db_pw, $db_database );
 if($db->connect_error) {
     echo 'Could not connect to database.';
     exit;
