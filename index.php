@@ -61,9 +61,16 @@ include 'header.html';
         <div class="d-flex flex-row mt-5"></div>
         <div class="d-flex flex-column">
             <h2 class="text-white pt-3 offset-md-3 col-md-6 text-center">FAST TRACKING</h2>
-            <input class="offset-md-4 col-md-4" type="text" placeholder="Package ID" v-model="packageID" id="IDc">
+            <div class="input-group mb-3 justify-content-center">
+            <input type="text" class="form-control col-md-4" placeholder="Package ID" aria-label="Package ID" id="IDc" v-model="packageID" aria-describedby="basic-addon1">
             <br>
+            <!--
             <input type="button" class="btn btn-success offset-md-5 col-md-2" value="FIND" data-toggle="modal" data-target="#computerModal" @click="btnHandler" id="btnc">
+-->
+                <div class="input-group-append">
+                    <button class="btn btn-dark" value="FIND" id="btnc" data-toggle="modal" data-target="#computerModal" @click="btnHandler" style="opacity:0.7" type="button"><img src="./img/magnifying.png" style="height:16px"></button>
+                </div>
+            </div>
         </div>
 
         <!-- Modal -->
@@ -89,17 +96,17 @@ include 'header.html';
 
         <div class="d-flex flex-row justify-content-around">
 
-            <div class="d-flex flex-column justify-content-center p-2">
-                <img class="img-fluid" src="./img/300x200.png" alt="300x200" style="opacity: 0.3;">
+            <div class="d-flex flex-column col-4 justify-content-center p-2">
+                <div class="jumbotron" style="opacity: 0.5; padding: 7em; margin-bottom: 0"></div>
                 <h5 class="text-white text-center">DELIVERY RATE</h5>
             </div>
-            <div class="d-flex flex-column justify-content-center p-2">
-                <img class="img-fluid" src="./img/300x200.png" alt="300x200" style="opacity: 0.3;">
+            <div class="d-flex flex-column col-4 justify-content-center p-2">
+                <div class="jumbotron" style="opacity: 0.5; padding: 7em; margin-bottom: 0"></div>
                 <h5 class="text-white text-center">SERVICE POINT</h5>
             </div>
 
-            <div class="d-flex flex-column justify-content-center p-2">
-                <img class="img-fluid" src="./img/300x200.png" alt="300x200" style="opacity: 0.3;">
+            <div class="d-flex flex-column col-4 justify-content-center p-2">
+                <div class="jumbotron" style="opacity: 0.5; padding: 7em; margin-bottom: 0"></div>
                 <h5 class="text-white text-center">SPECIAL SERVICE</h5>
             </div>
 
