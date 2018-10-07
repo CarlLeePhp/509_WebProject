@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模仿猜字游戏</title>
+</head>
+<body>
+    <div id="app">
+        <input type="button" :value="mainBtn" @click="refresh">
+        <p>第 {{questionNo}} 题，已得 {{marks}} 分。</p>
+        <h1>{{ question }}</h1>
+        <input type="button" :value="select[0]" @click="check(select[0])">
+        <input type="button" :value="select[1]" @click="check(select[1])">
+        <input type="button" :value="select[2]" @click="check(select[2])">
+        <input type="button" :value="select[3]" @click="check(select[3])">
+        <input type="button" :value="select[4]" @click="check(select[4])">
+        <input type="button" :value="select[5]" @click="check(select[5])">
+        <br>
+        <p v-text="result"></p>
+    </div>
+
+
+    <script src="./lib/vue/vue-2.4.0.js"></script>
+    <script>
+    var vm = new Vue ({
+        el: app,
+        data: {
+            result: "",
+            marks : 0,
+            questionNo: 1,
+            mainBtn: "开始",
+            question: "",
+            select: ["人", "口", "手", "大", "小", "得"],
+            rightAns: "",
+            wordBank : [
+                "狐假虎威",
+                "杞人忧天",
+                "力不从心",
+                "各得其所",
+                "覆水难收",
+                "画蛇添足",
+                "走马观花",
+                "塞翁失马",
+                "亡羊补牢",
+                "悬崖勒马"
+            ],
+            letterBank : "脾纹骆割缠眨桃帅献悟涂莲靠集它宝扰呆麦爷馅佣驻抬炎惑认奖篮擦揪耕膊弄棍翁泛秀文属郑辣岩漏塘谱迈商豪湖垒土往牙备酒鲜围锐展瓜刊搁闯以打删沸填吊裕引佛眯凤云设挺按柜撑唇矛宾狐聋史绪密肝骂嫌缘钻扔构屈驰瓦堆脾纹骆割缠眨桃帅"
+        },
+        methods: {
+            refresh(){
+                // Get a word
+                var myWord = Math.floor(Math.random() * 5); // 0~4
+                var myLetter = Math.floor(Math.random() * 4); // 0~3
+                myLetter = myLetter + 1
+                
+                this.question = this.wordBank[myWord]
+                if (myLetter > 1) {
+                    var start = this.question.slice(0, myLetter-1);
+                    this.rightAns = this.question.slice(myLetter-1, myLetter)
+                    var end = this.question.slice(myLetter, 4)
+                    this.question = start + "_" + end;
+                } else {
+                    this.rightAns = this.question.slice(0,1);
+                    this.question = this.question.slice(1,4);
+                    this.question = "_" + this.question;
+                }
+
+                // fill the selection
+                var j = Math.floor(Math.random() * 100); // 0~99
+                j = j + 1
+                for (i=0; i<6; i++){
+                    this.select[i] = this.letterBank.slice(j+i, j+i+1);
+                }
+
+                // insert the right answer
+                var m = Math.floor(Math.random() * 6); // 0~5
+                this.select[m] = this.rightAns;
+
+
+            },
+            check(userAsn){
+               
+                if(userAsn == this.rightAns) {
+                    this.marks = this.marks + 1
+                    this.questionNo = this.questionNo + 1
+                    this.refresh();
+                } else {
+                    this.result = "Try again!"
+                }
+                
+            }
+        }
+    })
+    
+    </script>
+</body>
+</html>
