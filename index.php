@@ -101,7 +101,16 @@ include 'header.html';
                 <h5 class="text-white text-center">DELIVERY RATE</h5>
             </div>
             <div class="d-flex flex-column col-4 justify-content-center p-2">
-                <div class="jumbotron" style="opacity: 0.5; padding: 7em; margin-bottom: 0"></div>
+                <div class="jumbotron" style="opacity: 0.5; padding: 6em; margin-bottom: 0">
+                    <a href="./servicePoint.php" class="btn btn-primary">Service Point</a>
+                </div>
+                <!--
+                <div class="jumbotron mb-0" style="opacity: 0.5;">
+                    <a class="btn" href="./img/servicePointLogo.png">
+                        <img src="./img/servicePointLogo.png" alt="service point" class="img-fluid">
+                    </a>
+                </div>
+                -->
                 <h5 class="text-white text-center">SERVICE POINT</h5>
             </div>
 
@@ -189,6 +198,8 @@ include 'header.html';
 include 'footer.html';
 
 // JS for this page should be writen after here.
+
+include '../conf_supermail.php';
 ?>
 
     <script>
@@ -202,7 +213,7 @@ include 'footer.html';
                 // Onclick event for the button
                 btnHandler() {
                     // 
-                    var urllink = 'http://localhost/data.php?packageID=' + this.packageID
+                    var urllink = "<?php echo $url; ?>" + 'data.php?packageID=' + this.packageID
                     this.$http.get(urllink).then(res => {
                         this.result = res.body
                     }, res => {

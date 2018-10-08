@@ -15,9 +15,11 @@ include 'header.html';
 <!-- Mobile End -->
 
 <!-- Computer -->
-<main class="container-fluid d-flex flex-row">
-    <div class="col-md-6">
+<div class="container-fluid d-flex flex-row justify-content-around">
+    <div class="col-md-5 m-2" >
         <h4>SERVICE POINT NEAREST WITH YOU</h4>
+        <div class="border" style="height:500px;">
+        
         <p>List Supermail Service Point</p>
         <ol>
             <li>
@@ -37,16 +39,27 @@ include 'header.html';
             </li>
         
         </ol>
+        </div>
     
 
     </div>
-    <div class="col-md-6">
-        <h4>SERVICE POINT NEAREST WITH YOU</h4>
+    <div class="col-md-5 m-2">
+        <form action="#" class="form-inline">
+            <label for="address">Input Your Address Here: </label>
+            <input type="text" name="address" id="" class="form-control mr-sm-2 ml-sm-2" placeholder="Address">
+            <button type="submit" class="btn btn-primary">Find</button>
+        </form>
+        <div class="d-flex flex-column justify-content-center align-items-center border" style="height:500px;">
+            <h4>Google Map</h4>
+            <p>Showing the close Service Point Depot to Customer on the map.</p>
+        </div>
     </div>
+</div>
+<div class="container-fluid d-flex flex-row justify-content-center">
+    <p class="m-4">Please Call Our Customer Service for Support</p>
+    <button class="btn btn-success m-3">CALL US</button>
+</div>
 
-    
-
-</main>
 <!-- Computer End -->
 
 
