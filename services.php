@@ -30,23 +30,54 @@ include 'header.html';
                 aria-controls="v-pills-updates" aria-selected="false">Updates</a>
             </div>
         </div>
-        <div class="col-md-9" style="height: 300px;">
+        <div class="col-md-9">
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade <?php if($item == 1) {echo 'show active';} ?>" id="v-pills-type" role="tabpanel" aria-labelledby="v-pills-type-tab">
-                    <div class="flex-row" style="background-color:gray; height:150px;">
-                        Type of Delivery
+                    <!--start from here-->
+                    <h2 class="p-5">Type of delivery</h2>
+                        <ul class="list-unstyled">
+                            <li class="media pb-5">
+                                <img class="mr-3 col-md-4 col-5" src="./img/Card0.png" alt="Service1">
+                                <div class="media-body col-md-6 col-sm-6">
+                                    <h5 class="mt-0 mb-1">Supermail Fast</h5>
+                                    <ul><li>Same Day Delivery</li><li>maximum weight 25 kg</li><li>within the country</li></ul>
+                                </div>
+                            </li>
+                            <br />
+                            <li class="media pb-5">
+                                <img class="mr-3 col-md-4 col-5" src="./img/Card1.png" alt="Service2">
+                                <div class="media-body col-md-6 col-sm-6">
+                                    <h5 class="mt-0 mb-1">Supermail 1</h5>
+                                    <ul><li>Over one night delivery</li><li>maximum weight 25 kg</li></ul>
+                                </div>
+                            </li>
+                            <br />
+                            <li class="media pb-5">
+                                <img class="mr-3 col-md-4 col-5" src="./img/Card2.png" alt="Service2">
+                                <div class="media-body col-md-6 col-sm-6">
+                                    <h5 class="mt-0 mb-1">Supermail 2</h5>
+                                    <ul><li>3 Days Delivery</li><li>maximum weight 25 kg</li></ul>
+                                </div>
+                            </li>
+                            <br />
+                            <li class="media pb-5">
+                                <img class="mr-3 col-md-4 col-5" src="./img/Card3.png" alt="Service2">
+                                <div class="media-body col-md-6 col-sm-6">
+                                    <h5 class="mt-0 mb-1">Supermail Reguler</h5>
+                                    <ul><li>5-7 Days delivery</li><li>maximum weight 25 kg</li></ul>
+                                </div>
+                            </li>
+                            <br />
+                            <li class="media pb-5">
+                                <img class="mr-3 col-md-4 col-5" src="./img/Card4.png" alt="Service2">
+                                <div class="media-body col-md-6 col-sm-6">
+                                    <h5 class="mt-0 mb-1">Supermail Cargo</h5>
+                                    <ul><li>5-7 Days Delivery</li><li>Over than 25 kg</li></ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="d-flex flex-row justify-content-around">
-                        <div>
-                            <h2>Column One</h2>
-                        </div>
-                        <div>
-                            <h2>Column Two</h2>
-                        </div>
-                        <div>
-                            <h2>Column Three</h2>
-                        </div>
-                    </div>
+                    <!--endhere-->
                 </div>
                 <div class="tab-pane fade <?php if($item == 2) {echo 'show active';} ?>" id="v-pills-gift" role="tabpanel" aria-labelledby="v-pills-gift-tab">
                     <h4>Gift Service</h4>
