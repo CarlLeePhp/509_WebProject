@@ -1,5 +1,5 @@
 <?php
-include '../conf_supermail.php';
+include '../../conf_supermail.php';
 // connet database
 // mysqli('server', 'username', 'password', 'databasename')
 // @ 通常用在函数前，阻止错误信息显示
@@ -10,10 +10,11 @@ if($db->connect_error) {
 }
 
 // Get the packageID from user
-$packageID = $_GET['packageID'];
+$email = $_GET['email'];
+$password = $_GET['password'];
 
 // SQL
-$query = "SELECT message FROM package WHERE code = '" . $packageID . "'";
+$query = "SELECT password FROM users WHERE email = '" . $email . "'";
 
 // query
 if(!$result = $db->query ($query)) {
@@ -24,14 +25,20 @@ if(!$result = $db->query ($query)) {
 
 // Check result
 if ($result->num_rows === 0) {
-    echo "The package ID (" . $packageID . ") is not exist.";
+    echo "This email is not exist.";
     $db->close();
     exit;
 }
 
 $actor = $result->fetch_assoc();
 
-echo $actor['message'];
+// Check the password
+if ($actor['password'] == $password) {
+    echo "Welcome!";
+} else {
+    echo "Wrong Password! Please try again.";
+}
+
 $result->free();
 $db->close();
 

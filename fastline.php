@@ -7,13 +7,13 @@ $item = $_GET["n"];
 
 <?php
 // This header.html include the content from DOCTYPE to the end of navigation.
-include 'header.html';
+include './view/header.html';
 
 // main
-include './components/fl_main.html';
+include './view/fastline.html';
 
 // This footer.html include footer and JS libs.
-include 'footer.html';
+include './view/footer.html';
 
 // JS for this page should be writen after here.
 ?>

@@ -7,7 +7,7 @@ $item = $_GET["n"];
 
 <?php
 // This header.html include the content from DOCTYPE to the end of navigation.
-include 'header.html';
+include './view/header.html';
 ?>
 
 
@@ -18,80 +18,98 @@ include 'header.html';
     <div class="row">
         <div class="col-md-3">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link <?php if($item == 1) {echo 'active';} ?>" id="v-pills-type-tab" data-toggle="pill" href="#v-pills-type"
-                    role="tab" aria-controls="v-pills-type" aria-selected="true">Type of Delivery</a>
-                <a class="nav-link <?php if($item == 2) {echo 'active';} ?>" id="v-pills-gift-tab" data-toggle="pill" href="#v-pills-gift" role="tab"
-                    aria-controls="v-pills-gift" aria-selected="false">Gift Service</a>
-                <a class="nav-link <?php if($item == 3) {echo 'active';} ?>" id="v-pills-national-tab" data-toggle="pill" href="#v-pills-national" role="tab"
-                    aria-controls="v-pills-national" aria-selected="false">National Courier</a>
-                <a class="nav-link <?php if($item == 4) {echo 'active';} ?>" id="v-pills-international-tab" data-toggle="pill" href="#v-pills-international" role="tab"
-                    aria-controls="v-pills-international" aria-selected="false">International Courier</a>
-                <a class="nav-link <?php if($item == 5) {echo 'active';} ?>" id="v-pills-updates-tab" data-toggle="pill" href="#v-pills-updates" role="tab"
+                <a class="nav-link <?php if($item == 1) {echo 'active';} ?>" id="v-pills-super-tab" data-toggle="pill" href="#v-pills-super"
+                    role="tab" aria-controls="v-pills-super" aria-selected="true">Super Service</a>
+                <a class="nav-link <?php if($item == 2) {echo 'active';} ?>" id="v-pills-freight-tab" data-toggle="pill" href="#v-pills-freight" role="tab"
+                    aria-controls="v-pills-freight" aria-selected="false">Freight Service</a>
+                <a class="nav-link <?php if($item == 3) {echo 'active';} ?>" id="v-pills-updates-tab" data-toggle="pill" href="#v-pills-updates" role="tab"
                 aria-controls="v-pills-updates" aria-selected="false">Updates</a>
             </div>
         </div>
         <div class="col-md-9">
             <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade <?php if($item == 1) {echo 'show active';} ?>" id="v-pills-type" role="tabpanel" aria-labelledby="v-pills-type-tab">
+                <div class="tab-pane fade <?php if($item == 1) {echo 'show active';} ?>" id="v-pills-super" role="tabpanel" aria-labelledby="v-pills-super-tab">
                     <!--start from here-->
-                    <h2 class="p-5">Type of delivery</h2>
-                        <ul class="list-unstyled">
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card0.png" alt="Service1">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail Fast</h5>
-                                    <ul><li>Same Day Delivery</li><li>maximum weight 25 kg</li><li>within the country</li></ul>
-                                </div>
-                            </li>
-                            <br />
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card1.png" alt="Service2">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail 1</h5>
-                                    <ul><li>Over one night delivery</li><li>maximum weight 25 kg</li></ul>
-                                </div>
-                            </li>
-                            <br />
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card2.png" alt="Service2">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail 2</h5>
-                                    <ul><li>3 Days Delivery</li><li>maximum weight 25 kg</li></ul>
-                                </div>
-                            </li>
-                            <br />
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card3.png" alt="Service2">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail Reguler</h5>
-                                    <ul><li>5-7 Days delivery</li><li>maximum weight 25 kg</li></ul>
-                                </div>
-                            </li>
-                            <br />
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card4.png" alt="Service2">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail Cargo</h5>
-                                    <ul><li>5-7 Days Delivery</li><li>Over than 25 kg</li></ul>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="container">
+                        <img src="./img/bannerSS.png" class="col-12" />
+                        
+                        <h2 class="p-5">Super Service</h2>
+                        <p class="col-12"> From Export to import and domestic service , super mail offers huge range of service delivery options. Find a delivery option that are suitable for you below</p>
+                        
+                        
+                        
+                        <div class="jumbotron-fluid col-12">
+                            <legend class="text-center">International Service</legend>
+                            <div class="row container"><div class="card-header bg-secondary rounded-top col-6 text-center text-white">Fastest</div><div class="card-header rounded-top bg-secondary col-6 text-center text-white">Best Price</div></div>
+                            <div class="row container"><div class=" card-header border-right bg-light col-6"><ul><li>Arriving in the next possible day</li><li>Using Air Service</li><li>Maximum individual weight 25 KG</li></ul></div><div class=" card-header bg-light col-6"><ul><li>Arriving within 3-7 days</li><li>no maximum weight</li></ul></div>
+                                
+                    
+                            </div>
+                        </div>
+                        <div class="jumbotron-fluid col-12">
+                            <legend class="text-center">Domestic Service</legend>
+                            <div class="row container"><div class="card-header bg-warning border-dark rounded-top col-6 text-center">Fastest</div><div class="card-header rounded-top  border-dark bg-warning col-6 text-center">Best Price</div></div>
+                            <div class="row container"><div class=" card-header border-right bg-light col-6"><ul><li>Arriving in the same day</li><li>Using Air Service</li><li>Maximum individual weight 25 KG</li></ul></div><div class=" card-header bg-light col-6"><ul><li>Arriving within 1-7 days</li><li>no maximum weight</li></ul></div>
+                                
+                    
+                            </div>
+                        </div>
                     </div>
                     <!--endhere-->
                 </div>
-                <div class="tab-pane fade <?php if($item == 2) {echo 'show active';} ?>" id="v-pills-gift" role="tabpanel" aria-labelledby="v-pills-gift-tab">
-                    <h4>Gift Service</h4>
-                    <p>Customer could do something, Customer could do something, Customer could do something.</p>
+                <div class="tab-pane fade <?php if($item == 2) {echo 'show active';} ?>" id="v-pills-freight" role="tabpanel" aria-labelledby="v-pills-freight-tab">
+                    <!--start from here-->
+
+                        <div class="container">
+                            <img src="./img/FreightBanner.jpg" class="col-12" />
+                            
+                                <h2 class="p-5">Freight Service</h2>
+
+                                <dl>
+                                    <dt>Land Freight Service</dt>
+                                    <Dd>
+                                        Ground transportation is an essential component of our service program. Our company supermail is committed to maintaining the highest performance standards in the industry inside and outside of new zealand. We offer an array of expedited transportation options to meet your needs which include:
+
+                                        <ul>
+                                            <li>Land Services</li>
+                                            <li>LTL/FTL</li>
+                                            <li>Direct Shipments</li>
+                                            <li>Consolidation Services</li>
+                                            <li>Gateways All Over The World</li>
+                                            <li>Cross Docking</li>
+                                            <li>Project Loads</li>
+                                            <li>Transport Insurance</li>
+                                            <li>Packing And Crating</li>
+                                        </ul>
+                                    </Dd>
+                                    <br />
+                                    <dt>Air Freight Service</dt>
+                                    <dd>
+                                        <p>
+                                            Supermail regularly consult on and coordinate airfreight consignments for our Customers.  A large percentage of these are handled as airfreight consolidations, as these provide the best costs for Shippers while still delivering an efficient service.
+
+                                            Airfreight consignments are typically smaller, less heavy goods when compared to Full Container Load (FCL) shipments carried by sea.
+                                        </p>
+                                    </dd>
+                                    <dt>Sea Freight Service</dt>
+                                    <dd>
+                                        Supermail also provide an sea freight service that transport bulk of your goods. it includes:
+                                        <ul>
+                                            <li>Full Container Load (FCL)</li>
+                                            <li>Less-than Container Load (LCL) Consolidation</li>
+                                            <li>Special Equipment Containers (Flatrack, Open Top, Reefer)</li>
+                                            <li>Break-Bulk or non-containerised (Roll-On Roll-Off)</li>
+                                            <li>Vehicle shipping</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+
+                                <p> Simply contact us and let us know what you need and we will arrange your delivery process whether it's land , air or sea freight shipping . we are here to help you to make delivery process easier.</p>
+                            </div>
+                        
+                        <!--endhere-->
                 </div>
-                <div class="tab-pane fade <?php if($item == 3) {echo 'show active';} ?>" id="v-pills-national" role="tabpanel" aria-labelledby="v-pills-national-tab">
-                    <h4>Courier Location</h4>
-                    <p>Customer could do something, Customer could do something, Customer could do something.</p>
-                </div>
-                <div class="tab-pane fade <?php if($item == 4) {echo 'show active';} ?>" id="v-pills-international" role="tabpanel" aria-labelledby="v-pills-international-tab">
-                    <h4>FAQ</h4>
-                    <p>Customer could do something, Customer could do something, Customer could do something.</p>
-                </div>
-                <div class="tab-pane fade <?php if($item == 5) {echo 'show active';} ?>" id="v-pills-updates" role="tabpanel" aria-labelledby="v-pills-updates-tab">
+                <div class="tab-pane fade <?php if($item == 3) {echo 'show active';} ?>" id="v-pills-updates" role="tabpanel" aria-labelledby="v-pills-updates-tab">
                     <h4>Updates</h4>
                     <p>Customer could do something, Customer could do something, Customer could do something.</p>
                 </div>
@@ -105,7 +123,7 @@ include 'header.html';
 
 <?php
 // This footer.html include footer and JS libs.
-include 'footer.html';
+include './view/footer.html';
 
 // JS for this page should be writen after here.
 ?>
