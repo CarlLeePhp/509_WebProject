@@ -1,0 +1,126 @@
+<!-- Content -->
+<main class="container-fluid" id="main">
+    <!-- Components > Nav > The tabs plugs with vertical pills -->
+    <div class="d-none d-md-block m-5"></div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link <?php if($item == 1) {echo 'active';} ?>" id="v-pills-type-tab" data-toggle="pill"
+                    href="#v-pills-type" role="tab" aria-controls="v-pills-type" aria-selected="true">Delivery Speed</a>
+
+                <a class="nav-link <?php if($item == 2) {echo 'active';} ?>" id="v-pills-rates-tab" data-toggle="pill"
+                    href="#v-pills-rates" role="tab" aria-controls="v-pills-rates" aria-selected="false">Rates</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="tab-content" id="v-pills-tabContent">
+                <!--Delivery Speed Start-->
+                <div class="tab-pane fade <?php if($item == 1) {echo 'show active';} ?>" id="v-pills-type" role="tabpanel"
+                    aria-labelledby="v-pills-type-tab">
+
+                    <h2 class="p-5">Delivery Speed</h2>
+                    <ul class="list-unstyled">
+                        <li class="media pb-5">
+                            <img class="mr-3 col-md-4 col-5" src="./img/Card0.png" alt="Service1">
+                            <div class="media-body col-md-6 col-sm-6">
+                                <h5 class="mt-0 mb-1">Supermail Fast</h5>
+                                <ul>
+                                    <li>Same Day Delivery</li>
+                                    <li>maximum weight 25 kg</li>
+                                    <li>within the country</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <br />
+                        <li class="media pb-5">
+                            <img class="mr-3 col-md-4 col-5" src="./img/Card1.png" alt="Service2">
+                            <div class="media-body col-md-6 col-sm-6">
+                                <h5 class="mt-0 mb-1">Supermail 1</h5>
+                                <ul>
+                                    <li>Over one night delivery</li>
+                                    <li>maximum weight 25 kg</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <br />
+                        <li class="media pb-5">
+                            <img class="mr-3 col-md-4 col-5" src="./img/Card2.png" alt="Service2">
+                            <div class="media-body col-md-6 col-sm-6">
+                                <h5 class="mt-0 mb-1">Supermail 2</h5>
+                                <ul>
+                                    <li>3 Days Delivery</li>
+                                    <li>maximum weight 25 kg</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <br />
+                        <li class="media pb-5">
+                            <img class="mr-3 col-md-4 col-5" src="./img/Card3.png" alt="Service2">
+                            <div class="media-body col-md-6 col-sm-6">
+                                <h5 class="mt-0 mb-1">Supermail Reguler</h5>
+                                <ul>
+                                    <li>5-7 Days delivery</li>
+                                    <li>maximum weight 25 kg</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <br />
+                        <li class="media pb-5">
+                            <img class="mr-3 col-md-4 col-5" src="./img/Card4.png" alt="Service2">
+                            <div class="media-body col-md-6 col-sm-6">
+                                <h5 class="mt-0 mb-1">Supermail Cargo</h5>
+                                <ul>
+                                    <li>5-7 Days Delivery</li>
+                                    <li>Over than 25 kg</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--Delivery Speed End-->
+
+                <div class="tab-pane fade <?php if($item == 2) {echo 'show active';} ?>" id="v-pills-rates" role="tabpanel"
+                    aria-labelledby="v-pills-rates-tab">
+                    <h4>Rates</h4>
+                    <form action="">
+                        <div class="form-group row">
+                            <label for="origin" class="col-sm-2 col-form-label">Origin:</label>
+                            <div class="col-sm-8">
+                                <select name="origin" id="origin" class="form-control" v-model="origin">
+                                    <option value="0">Please select origin, such as Invercargill</option>
+                                    <option v-for="place in places" :value="place.id">{{place.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="dest" class="col-sm-2 col-form-label">Dest:</label>
+                            <div class="col-sm-8">
+                                <select name="dest" id="dest" class="form-control" v-model="dest">
+                                    <option value="0">Please select destination, such as Invercargill</option>
+                                    <option v-for="place in places" :value="place.id">{{place.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="weight" class="col-sm-2 col-form-label">Weight:</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="weight" id="weight" placeholder="Weight" v-model="weight">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">kg</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="offset-sm-2 btn btn-primary" @click="getQuote">Get Quote</a>
+                    </form>
+                    <br>
+                    <p v-text="quoteResult"></p>
+                    <p>There are two types of ticket, near and far. Which type is available depends on the distance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<!-- Content End -->

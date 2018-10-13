@@ -8,93 +8,89 @@ $item = $_GET["n"];
 <?php
 // This header.html include the content from DOCTYPE to the end of navigation.
 include './view/header.html';
-?>
 
+// Main
+include './view/shipment.html';
 
-<!-- Content -->
-<main class="container-fluid" >
-    <!-- Components > Nav > The tabs plugs with vertical pills -->
-    <div class="d-none d-md-block m-5"></div>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link <?php if($item == 1) {echo 'active';} ?>" id="v-pills-type-tab" data-toggle="pill" href="#v-pills-type"
-                    role="tab" aria-controls="v-pills-type" aria-selected="true">Delivery Speed</a>
-                
-                <a class="nav-link <?php if($item == 2) {echo 'active';} ?>" id="v-pills-rates-tab" data-toggle="pill" href="#v-pills-rates" role="tab"
-                    aria-controls="v-pills-rates" aria-selected="false">Rates</a>
-            </div>
-        </div>
-        <div class="col-md-9">
-            <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade <?php if($item == 1) {echo 'show active';} ?>" id="v-pills-type" role="tabpanel" aria-labelledby="v-pills-type-tab">
-                    <!--start from here-->
-                    <h2 class="p-5">Delivery Speed</h2>
-                        <ul class="list-unstyled">
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card0.png" alt="Service1">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail Fast</h5>
-                                    <ul><li>Same Day Delivery</li><li>maximum weight 25 kg</li><li>within the country</li></ul>
-                                </div>
-                            </li>
-                            <br />
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card1.png" alt="Service2">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail 1</h5>
-                                    <ul><li>Over one night delivery</li><li>maximum weight 25 kg</li></ul>
-                                </div>
-                            </li>
-                            <br />
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card2.png" alt="Service2">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail 2</h5>
-                                    <ul><li>3 Days Delivery</li><li>maximum weight 25 kg</li></ul>
-                                </div>
-                            </li>
-                            <br />
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card3.png" alt="Service2">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail Reguler</h5>
-                                    <ul><li>5-7 Days delivery</li><li>maximum weight 25 kg</li></ul>
-                                </div>
-                            </li>
-                            <br />
-                            <li class="media pb-5">
-                                <img class="mr-3 col-md-4 col-5" src="./img/Card4.png" alt="Service2">
-                                <div class="media-body col-md-6 col-sm-6">
-                                    <h5 class="mt-0 mb-1">Supermail Cargo</h5>
-                                    <ul><li>5-7 Days Delivery</li><li>Over than 25 kg</li></ul>
-                                </div>
-                            </li>
-                        </ul>
-                    
-                    <!--endhere-->
-                </div>
-                
-                <div class="tab-pane fade <?php if($item == 2) {echo 'show active';} ?>" id="v-pills-rates" role="tabpanel" aria-labelledby="v-pills-rates-tab">
-                    <h4>Rates</h4>
-                    <p>Customer could do something, Customer could do something, Customer could do something.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</main>
-<!-- Content End -->
-
-
-<?php
 // This footer.html include footer and JS libs.
 include './view/footer.html';
 
 // JS for this page should be writen after here.
 ?>
 
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+            places: [
+                {id: 1, name: "Invercargill", group: 1},
+                {id: 2, name: "Dunedin", group: 1},
+                {id: 3, name: "Christchurch", group: 1},
+                {id: 4, name: "Auckand", group: 2},
+                {id: 5, name: "Wellington", group: 2},
+                {id: 6, name: "Sydney", group: 2},
+                {id: 7, name: "Perth", group: 2}
 
+            ],
+            weight: 0,
+            origin: "0",
+            dest: "0",
+            quoteResult: "The quote result will be here.",
+            unitPrice: 10
+        },
+        methods: {
+            getQuote(){
+                // Check the input
+                // 1. Origin and Dest can not be empty and the same
+                // 2. Weight can not be empty and must be number
+                if(this.origin == "0") {
+                    this.quoteResult = "Please select a origin place."
+                    return
+                }
+                if(this.dest == "0") {
+                    this.quoteResult = "Please select a destination place."
+                    return
+                }
+
+                if(this.origin == this.dest) {
+                    this.quoteResult= "The origin and destination can not be the same place."
+                    return
+                }
+
+                if(this.weight == "0") {
+                    this.quoteResult= "The weight can not be empty."
+                    return
+                }
+
+                if(!Number(this.weight)) {
+                    this.quoteResult= "The weight must be a number."
+                    return
+                }
+
+                // caculate the price
+                if (this.places[Number(this.origin)-1].group == this.places[Number(this.dest)-1].group) {
+                    this.unitPrice = 10;
+                } else {
+                    this.unitPrice = 20;
+                }
+                this.weight = Number(this.weight)
+                var ticket = 0
+                ticket = this.weight / 5
+                if(ticket > (Math.round(ticket))) {
+                    ticket = Math.round(ticket) + 1
+                } else {
+                    ticket = Math.round(ticket) - 1
+                }
+
+                var totalPrice = this.unitPrice * ticket
+
+                this.quoteResult= "Total price is NZ$" + totalPrice;
+
+            }
+        }
+    })
+
+</script>
 
 
 </body>

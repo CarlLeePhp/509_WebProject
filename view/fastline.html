@@ -1,36 +1,49 @@
+<!-- Breadcrumb -->
+<div class="container-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Fastline</li>
+        </ol>
+    </nav>
+</div>
+<!-- Breadcrumb End -->
+
 <!-- Content -->
-<main class="container-fluid">
+<main class="container-fluid" id="main">
     <!-- Components > Nav > The tabs plugs with vertical pills -->
     <div class="d-none d-md-block m-5"></div>
+
     <ul class="nav nav-pills mb-3 d-flex flex-row justify-content-around" id="pills-tab" role="tablist">
         <li class="nav-item text-center">
-            <a class="nav-link  active" id="pills-origin-tab" data-toggle="pill" href="#pills-origin"
-                role="tab" aria-controls="pills-origin" aria-selected="true">ORIGIN</a>
+            <a class="nav-link active" id="pills-origin-tab" data-toggle="pill" href="#pills-origin" role="tab"
+                aria-controls="pills-origin" aria-selected="true">ORIGIN</a>
         </li>
         <li class="nav-item text-center">
-            <a class="nav-link >" id="pills-package-tab" data-toggle="pill" href="#pills-package"
-                role="tab" aria-controls="pills-package" aria-selected="false">PACKAGE</a>
+            <a class="nav-link" id="pills-package-tab" data-toggle="pill" href="#pills-package" role="tab"
+                aria-controls="pills-package" aria-selected="false">PACKAGE</a>
         </li>
         <li class="nav-item text-center">
-            <a class="nav-link >" id="pills-shipment-tab" data-toggle="pill"
-                href="#pills-shipment" role="tab" aria-controls="pills-shipment" aria-selected="false">SHIPMENT</a>
+            <a class="nav-link" id="pills-shipment-tab" data-toggle="pill" href="#pills-shipment" role="tab"
+                aria-controls="pills-shipment" aria-selected="false">SHIPMENT</a>
         </li>
         <li class="nav-item text-center">
-            <a class="nav-link >" id="pills-rates-tab" data-toggle="pill" href="#pills-rates"
-                role="tab" aria-controls="pills-rates" aria-selected="false">RATES</a>
+            <a class="nav-link" id="pills-rates-tab" data-toggle="pill" href="#pills-rates" role="tab" aria-controls="pills-rates"
+                aria-selected="false">RATES</a>
         </li>
         <li class="nav-item text-center">
-            <a class="nav-link >" id="pills-payment-tab" data-toggle="pill" href="#pills-payment"
-                role="tab" aria-controls="pills-payment" aria-selected="false">PAYMENT</a>
+            <a class="nav-link" id="pills-payment-tab" data-toggle="pill" href="#pills-payment" role="tab"
+                aria-controls="pills-payment" aria-selected="false">PAYMENT</a>
         </li>
         <li class="nav-item text-center">
-            <a class="nav-link >" id="pills-notification-tab" data-toggle="pill"
-                href="#pills-notification" role="tab" aria-controls="pills-notification" aria-selected="false">NOTIFICATION</a>
+            <a class="nav-link" id="pills-notification-tab" data-toggle="pill" href="#pills-notification" role="tab"
+                aria-controls="pills-notification" aria-selected="false">NOTIFICATION</a>
         </li>
     </ul>
+
     <div class="tab-content" id="pills-tabContent">
-        <div class="border p-2 tab-pane fade show active" id="pills-origin" role="tabpanel"
-            aria-labelledby="pills-origin-tab">
+        <!-- Origin Start -->
+        <div class="border p-2 tab-pane fade show active" id="pills-origin" role="tabpanel" aria-labelledby="pills-origin-tab">
             <h4>THE GOODS ORIGIN</h4>
             <form action="">
                 <div class="form-row">
@@ -126,13 +139,14 @@
                             Default checkbox
                         </label>
                     </div>
-                    <button class="btn btn-primary ml-auto">NEXT</button>
-                    <button class="btn btn-warning ml-2">CANCEL</button>
+                    <a class="btn btn-primary ml-auto" @click="nextHandler">NEXT</a>
+                    <a class="btn btn-white ml-2">CANCEL</a>
                 </div>
             </form>
         </div>
-        <div class="tab-pane fade  p-2 border" id="pills-package" role="tabpanel"
-            aria-labelledby="pills-package-tab">
+        <!-- Origin End -->
+        <!-- Package Detail Start -->
+        <div class="border p-2 tab-pane fade " id="pills-package" role="tabpanel" aria-labelledby="pills-package-tab">
             <h4>PACKAGE DETAIL</h4>
             <div class="form-group">
                 <label for="deliverTo">DELIVER TO</label>
@@ -174,7 +188,7 @@
                     </select>
                 </div>
             </div>
-            
+
             <div class="form-group form-inline">
                 <label for="packageType" class="form-label col-md-2"><strong>PACKAGE TYPE:</strong></label>
                 <select name="packageType" id="packageType" class="form-control col-md-4">
@@ -209,18 +223,133 @@
                 <input type="date" name="shipDate" id="shipDate" class="form-control col-md-3">
             </div>
             <div class="d-flex flex-row">
-                <button class="btn btn-primary ml-auto">NEXT</button>
-                <button class="btn btn-warning ml-2">CANCEL</button>
+                <a class="btn btn-primary ml-auto" @click.prevent="nextHandler">NEXT</a>
+                <a class="btn btn-white ml-2">CANCEL</a>
             </div>
         </div>
-        <div class="tab-pane fade  border p-2" id="pills-shipment" role="tabpanel"
-            aria-labelledby="pills-shipment-tab" style="height: 500px;">SHIPMENT</div>
-        <div class="tab-pane fade  border p-2" id="pills-rates" role="tabpanel"
-            aria-labelledby="pills-rates-tab" style="height: 500px;">RATES</div>
-        <div class="tab-pane fade  border p-2" id="pills-payment" role="tabpanel"
-            aria-labelledby="pills-payment-tab" style="height: 500px;">PAYMENT</div>
-        <div class="tab-pane fade  border p-2" id="pills-notification" role="tabpanel"
-            aria-labelledby="pills-notification-tab" style="height: 500px;">NOTIFICATION</div>
+        <!-- Package Detail End -->
+        <!-- Shipment Start -->
+        <div class="border p-2 tab-pane fade " id="pills-shipment" role="tabpanel" aria-labelledby="pills-shipment-tab"
+            style="height: 500px;">
+            <h4>Shipment</h4>
+            <form action="">
+                <div class="form-group row">
+                    <label for="orderNo" class="offset-sm-1 col-sm-2">1. Order NO:</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="orderNo" id="orderNo" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="deliverySpeed" class="offset-sm-1 col-sm-2">2. Delivery Speed:</label>
+                    <div class="col-sm-4">
+                        <select name="deliverySpeed" id="deliverySpeed" class="form-control" @change="getDeliverySpeedTerm"
+                            v-model="deliverySpeed">
+                            <option value="1">Fast</option>
+                            <option value="2">Normal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="offset-sm-3">Term and Condition</p>
+                </div>
+                <div class="row">
+                    <p class="offset-sm-3" v-text="terms"></p>
+                </div>
+                <div class="row">
+                    <p class="offset-sm-1 col-sm-2">3. Extra Service:</p>
+                    <div class="col-sm-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="extraService" id="extraService1" value="extraService1"
+                                checked>
+                            <label class="form-check-label" for="extraService1">
+                                Fragile Material / Dangerous Goods
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="extraService" id="extraService2" value="extraService2">
+                            <label class="form-check-label" for="extraService2">
+                                Perishables & Hazardous Goods
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="extraService" id="extraService3" value="extraService3">
+                            <label class="form-check-label" for="extraService3">
+                                Door to Door Services
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="extraService" id="extraService4" value="extraService4">
+                            <label class="form-check-label" for="extraService4">
+                                Repackaging
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="offset-sm-1 col-sm-2">4. Shipment Type:</p>
+                    <div class="col-sm-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shipmentType" id="shipmentType1" value="shipmentType1"
+                                checked>
+                            <label class="form-check-label" for="shipmentType1">
+                                Land / Domestic in the region Service
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shipmentType" id="shipmentType2" value="shipmentType2">
+                            <label class="form-check-label" for="shipmentType2">
+                                AIR / International / Domestic service
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shipmentType" id="shipmentType3" value="shipmentType3">
+                            <label class="form-check-label" for="shipmentType3">
+                                SEA / International / Domestic service (Bulk Items)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="others" class="offset-sm-1 col-sm-2">5. Others Inquiry:</label>
+                    <div class="col-sm-4">
+                        <textarea class="form-control" id="others" rows="3"></textarea>
+                    </div>
+                </div>
+
+
+            </form>
+            <div class="d-flex flex-row">
+                <a class="btn btn-primary ml-auto" @click.prevent="nextHandler">NEXT</a>
+                <a class="btn btn-white ml-2">CANCEL</a>
+            </div>
+        </div>
+        <!-- Shipment End -->
+        <!-- Rates Start -->
+        <div class="border p-2 tab-pane fade " id="pills-rates" role="tabpanel" aria-labelledby="pills-rates-tab" style="height: 500px;">RATES
+            <div class="d-flex flex-row">
+                <a class="btn btn-primary ml-auto" @click.prevent="nextHandler">NEXT</a>
+                <a class="btn btn-white ml-2">CANCEL</a>
+            </div>
+        </div>
+        <!-- Rates End -->
+        <!-- Payment Start -->
+        <div class="border p-2 tab-pane fade " id="pills-payment" role="tabpanel" aria-labelledby="pills-payment-tab"
+            style="height: 500px;">PAYMENT
+            <div class="d-flex flex-row">
+                <a class="btn btn-primary ml-auto" @click.prevent="nextHandler">NEXT</a>
+                <a class="btn btn-white ml-2">CANCEL</a>
+            </div>
+        </div>
+        <!-- Payment End -->
+        <!-- Notification Start -->
+        <div class="border p-2 tab-pane fade " id="pills-notification" role="tabpanel" aria-labelledby="pills-notification-tab"
+            style="height: 500px;">NOTIFICATION
+            <div class="d-flex flex-row">
+                <a class="btn btn-primary ml-auto" @click.prevent="nextHandler">NEXT</a>
+                <a class="btn btn-white ml-2">CANCEL</a>
+            </div>
+        </div>
+        <!-- Notification End -->
     </div>
     <div class="d-none d-md-block m-5"></div>
 </main>
