@@ -1,0 +1,262 @@
+﻿<!-- Content -->
+<main class="container-fluid">
+    <!-- Components > Nav > The tabs plugs with vertical pills -->
+    <div class="d-none d-md-block m-5"></div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link <?php if($item == 1) {echo 'active';} ?>" id="v-pills-company-tab" data-toggle="pill"
+                    href="#v-pills-company" role="tab" aria-controls="v-pills-company" aria-selected="true">Our Company</a>
+                <a class="nav-link <?php if($item == 2) {echo 'active';} ?>" id="v-pills-ourcustomer-tab" data-toggle="pill"
+                    href="#v-pills-ourcustomer" role="tab" aria-controls="v-pills-ourcustomer" aria-selected="false">Our Customer</a>
+                <a class="nav-link <?php if($item == 3) {echo 'active';} ?>" id="v-pills-partnership-tab" data-toggle="pill"
+                    href="#v-pills-partnership" role="tab" aria-controls="v-pills-partnership" aria-selected="false">Our Partner</a>
+                <a class="nav-link <?php if($item == 4) {echo 'active';} ?>" id="v-pills-award-tab" data-toggle="pill"
+                    href="#v-pills-award" role="tab" aria-controls="v-pills-award" aria-selected="false">Our Achievement</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade <?php if($item == 1) {echo 'show active';} ?>" id="v-pills-company" role="tabpanel"
+                    aria-labelledby="v-pills-company-tab">
+                    <!--Our Company Start-->
+                    <div class="container">
+                        <h2>Our Company</h2>
+                        <hr />
+                        <div class="lead text-justify col-12 pb-5 pr-5">
+                            <div class="d-lg-flex justify-content-center container col-lg-11 col-sm-6 col-md-9 pb-3">
+                                <img src="./img/logo.png" alt="ourlogo" class="container-fluid col-lg-10 col-sm-6 col-md-12" />
+                            </div>
+                            <style>
+                                .letter::first-letter {
+                                    font-size: 200%
+                                }
+                            </style>
+                            <div class="letter">
+                                <p> Supermail delivery services was founded in 2014 within the short amount of time ,
+                                    our business are growing at steady pace.</p>
+                                <p>The supermail delivery services cover a huge area of new zealand and we are proud of
+                                    the achievement we have made in the past year of experience.</p>
+                                <p>
+                                    What makes us stands out of other company is that we make sure your items are safe
+                                    and received by the recipient with affordable price. We also offers different type
+                                    of services for you to choose from,
+                                    we always listen to our customer and provide them with the best solution.
+                                </p>
+                                <p>
+                                    Our company won’t be what we are today without the support of our partner .</p>
+
+
+                                <p> Recently we announce our new partnership with Parcelforce which makes our service
+                                    able to cover larger area in australia
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="offset-sm-1 offset-md-0 pb-5">
+                            <div class="container-fluid row justify-content-around">
+                                <a href="./aboutUs.php?n=4" class="text-dark">
+                                    <img class="col-9 d-flex row" src="./img/throphy.png" alt="achievementpage" />Our
+                                    achievement
+                                </a>
+                                <a href="./aboutUs.php?n=3" class="text-dark">
+                                    <img class="col-9 d-flex row" src="./img/shaking.png" alt="partnershippage"><span
+                                        class="offset-1">Our Partner</span>
+                                </a>
+                                <a href="./aboutUs.php?n=2" class="text-dark">
+                                    <img class="col-9 d-flex row" src="./img/customer.png" alt="ourcustomerpage"><span
+                                        class="offset-1">Our Customer</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--Our Company End-->
+                </div>
+                <div class="tab-pane fade <?php if($item == 2) {echo 'show active';} ?>" id="v-pills-ourcustomer" role="tabpanel"
+                    aria-labelledby="v-pills-ourcustomer-tab">
+                    <!--Our Customer Start-->
+
+                    <div class="container">
+                        <h2>Our Customer</h2>
+                        <hr />
+
+                        <div class="lead text-justify col-12 pb-5 pr-5">
+
+
+                            <p class="pb-5">
+                                We have provided our service regularly to these company.
+                            </p>
+                            <!--computer-->
+                            <div class="container-fluid d-none d-md-flex justify-content-around">
+                                <img class="col-md-3" style="height: 55px" src="./img/amazon.jpg" alt="amazon">
+                                <img class="col-md-3" style="height: 55px" src="./img/trademe.png" alt="trademe" />
+                                <img class="col-md-3" style="height: 55px" src="./img/paknsave.png" alt="paknsave" />
+                            </div>
+                            <!--mobile-->
+                            <div class="container-fluid d-md-none  justify-content-around">
+                                <div class="pb-5">
+                                    <img class="col-md-4" style="height: 80px" src="./img/amazon.jpg" alt="amazon">
+                                </div>
+                                <div class="pb-5">
+                                    <img class="col-md-4" style="height: 80px" src="./img/trademe.png" alt="trademe" />
+                                </div>
+                                <div class="pb-5">
+                                    <img class="col-md-4 " style="height: 80px" src="./img/paknsave.png" alt="paknsave" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="offset-sm-1 offset-md-0 pb-5">
+                        <div class="container-fluid row justify-content-around">
+                            <a href="./aboutUs.php?n=4" class="text-dark">
+                                <img class="col-9 d-flex row" src="./img/throphy.png" alt="achievementpage" />Our
+                                Achievement
+                            </a>
+                            <a href="./aboutUs.php?n=1" class="text-dark">
+                                <img class="col-9 d-flex row" src="./img/aboutUS.png" alt="AboutUS"><span class="offset-1">Our
+                                    Company</span>
+                            </a>
+                            <a href="./aboutUs.php?n=3" class="text-dark">
+                                <img class="col-9 d-flex row" src="./img/shaking.png" alt="Partnership" /><span class="offset-1">Our
+                                    Partner</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!--Our Customer End-->
+                </div>
+                <div class="tab-pane fade <?php if($item == 3) {echo 'show active';} ?>" id="v-pills-partnership" role="tabpanel"
+                    aria-labelledby="v-pills-partnership-tab">
+                    <!--Our Partner Start-->
+
+                    <div class="container">
+
+
+                        <h2>Our partner</h2>
+                        <hr />
+
+                        <div class="lead text-justify col-12 pb-5 pr-5">
+
+
+                            <p class="pb-5">
+                                We won't be what we are today if not for these people . We are grateful for what they
+                                had
+                                done . Here we are announcing our lovely partner.
+
+                            </p>
+                            <div class="container row justify-content-around ">
+                                <img class="col-5 col-md-4  bg-danger" src="./img/parcelforce.png" />
+                                <img class="col-5 col-md-4" src="./img/crown.png" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="offset-sm-1 offset-md-0 pb-5">
+                        <div class="container-fluid row justify-content-around">
+                            <a href="./aboutUs.php?n=4" class="text-dark">
+                                <img class="col-9 d-flex row" src="./img/throphy.png" alt="achievementpage" />Our
+                                Achievement
+                            </a>
+                            <a href="./aboutUs.php?n=1" class="text-dark">
+                                <img class="col-9 d-flex row" src="./img/aboutUS.png" alt="AboutUS"><span class="offset-1">Our
+                                    Company</span>
+                            </a>
+                            <a href="./aboutUs.php?n=2" class="text-dark">
+                                <img class="col-9 d-flex row" src="./img/customer.png" alt="ourcustomerpage"><span
+                                    class="offset-1">Our Customer</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!--Our Partner End-->
+                </div>
+                <div class="tab-pane fade <?php if($item == 4) {echo 'show active';} ?>" id="v-pills-award" role="tabpanel"
+                    aria-labelledby="v-pills-award-tab">
+                    <!--Our Achievement Start-->
+
+                    <div class="container">
+
+
+                        <h2>Our Achievement</h2>
+                        <hr />
+
+                        <div class="lead text-justify col-12 pb-5 pr-5">
+
+
+                            <p>
+                                As a franchise that are fairly new , We are proud for the multiple awards that we
+                                received. <br /> That award itself represent our growth as an organization and that we
+                                are actually acknowledged by the people.
+                                We will try to maintain whatever are the best for our customer and continue our
+                                success.
+                            </p>
+                            <h3 class="pb-2">Supermail Past awards and achievement</h3>
+
+                            <table class="table col-md-11 text-justify">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Year</th>
+                                        <th scope="col">Awards</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td class="justify-content-center">2018</td>
+                                        <td><img src="./img/feelsgoodman.png" style="width:15%" alt="awards" /></td>
+                                        <td>best delivery service of the year</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td class="justify-content-center">2015</td>
+                                        <td><img src="./img/Westpac.png" style="width: 30%" alt="westpacawards" /></td>
+                                        <td>Westpac franchise of the year</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td class="justify-content-center">2014</td>
+                                        <td><img src="./img/pogchamp.png" style="width: 15%" </td> <td>Rising
+                                            Franchise of the year</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="offset-sm-1 offset-md-0 pb-5">
+                        <div class="container-fluid row justify-content-around">
+                            <a href="./aboutUs.php?n=1" class="text-dark">
+                                <img class="col-9 d-flex row" src="./img/aboutUS.png" alt="aboutuspage" />Our
+                                company
+                            </a>
+                            <a href="./aboutUs.php?n=3" class="text-dark">
+                                <img class="col-9 d-flex row" src="./img/shaking.png" alt="partnershippage"><span class="offset-1">Our
+                                    Partner</span>
+                            </a>
+                            <a href="./aboutUs.php?n=2" class="text-dark">
+                                <img class="col-9 d-flex row" src="./img/customer.png" alt="OurCustomerPage"><span
+                                    class="offset-1">Our
+                                    Customer</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!--Our Achievement End-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<!-- Content End -->

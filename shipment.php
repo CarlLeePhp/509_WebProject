@@ -52,10 +52,6 @@ include './view/footer.html';
                     return
                 }
 
-                if(this.origin == this.dest) {
-                    this.quoteResult= "The origin and destination can not be the same place."
-                    return
-                }
 
                 if(this.weight == "0") {
                     this.quoteResult= "The weight can not be empty."
