@@ -24,9 +24,11 @@ include './view/header.html';
                     aria-controls="v-pills-freight" aria-selected="false">Freight Service</a>
                 <a class="nav-link <?php if($item == 3) {echo 'active';} ?>" id="v-pills-updates-tab" data-toggle="pill" href="#v-pills-updates" role="tab"
                 aria-controls="v-pills-updates" aria-selected="false">Updates</a>
+                <a class="nav-link <?php if($item == 4) {echo 'active';} ?>" id="v-pills-extraService-tab" data-toggle="pill" href="#v-pills-extraService" role="tab"
+                aria-controls="v-pills-extraService" aria-selected="false">Extra Service</a>
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9 pb-5">
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade <?php if($item == 1) {echo 'show active';} ?>" id="v-pills-super" role="tabpanel" aria-labelledby="v-pills-super-tab">
                     <!--start from here-->
@@ -112,6 +114,50 @@ include './view/header.html';
                 <div class="tab-pane fade <?php if($item == 3) {echo 'show active';} ?>" id="v-pills-updates" role="tabpanel" aria-labelledby="v-pills-updates-tab">
                     <h4>Updates</h4>
                     <p>Customer could do something, Customer could do something, Customer could do something.</p>
+                </div>
+                <div class="tab-pane fade <?php if($item == 4) {echo 'show active';} ?>" id="v-pills-extraService" role="tabpanel" aria-labelledby="v-pills-extraService-tab">
+                    <!--start from here-->
+                    <div class="container">
+                        <h2>Extra Service</h2>
+                        <hr />
+                        <div class="container row">
+                            <div class="col-md-4 mt-3 pb-sm-2 pb-md-0 "><img class="col-12 " src="./img/DoortoDoorservice.png"
+                                    alt="doortodoor"></div>
+                            <div class="card col-md-8 mt-3">
+                                <legend>Door-To-Door Service</legend>
+                                <hr />
+                                <div class="card-body"> Supermail provides a door to door service if you feel the need
+                                    of the package to be received in person. it will nullify the chance of the package
+                                    getting lost or broken if we just leave the package in front of your doorstep</div>
+                            </div>
+                            <div class="col-md-4 mt-5 pb-sm-2 pb-md-0 "><img class="col-12 " src="./img/Repacking.png"
+                                    alt="Repacking"></div>
+                            <div class="card col-md-8 mt-5">
+                                <legend>Repacking</legend>
+                                <hr />
+                                <div class="card-body"> Do you need us to help you to pack your items? do not worry .
+                                    We do have service for that.</div>
+                            </div>
+                            <div class="col-md-4 mt-5 pb-sm-2 pb-md-0 "><img class="col-12 " src="./img/Safe.png"
+                                    alt="Extra Security"></div>
+                            <div class="card col-md-8 mt-5">
+                                <legend>Extra Security</legend>
+                                <hr />
+                                <div class="card-body">For Things that need extra security like Hazardrous goods and
+                                    Fragile items . We will provide a service to make sure the items are handled as
+                                    securely as possible</div>
+                            </div>
+                            <div class="col-md-4 mt-5 pb-sm-2 pb-md-0 "><img class="col-12 " src="./img/Time.png"
+                                    alt="Arrange time"></div>
+                            <div class="card col-md-8 mt-5">
+                                <legend>Arrange Time</legend>
+                                <hr />
+                                <div class="card-body">Do you have a requirement for when the recepient would receive
+                                    their items? Just tell us and we will arrange it for you </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

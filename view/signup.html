@@ -1,5 +1,5 @@
 ﻿<!--content-->
-<main class="container-fluid row col">
+<main class="container-fluid row col" id="main">
     <!--mobile-->
     <div class="d-md-none col-12 pt-5">
 
@@ -67,12 +67,12 @@
                 </div>
             </div><br />
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="Privacy">
+                <input type="checkbox" class="form-check-input" id="Privacy" >
                 <label class="form-check-label small text-left" for="Privacy">By checking this box it means that you
                     are agreeing with our Privacy Policy</label>
             </div>
             <div class="d-flex flex-row pb-5"></div>
-            <input type="button" class="btn btn-info offset-8 col-4" Value="Register">
+            <input type="button" class="btn btn-info offset-8 col-4" Value="Register" id="Register" disabled>
             <div class="d-flex flex-row pb-2"></div>
         </form>
 
@@ -87,12 +87,12 @@
                 <legend>Log-in Information</legend>
             </div>
             <hr />
-            <div class="form-group col-6"><label for="Email">Email</label><input type="text" placeholder="Input Email"
-                    id="Email" class="form-control" /></div>
-            <div class="form-group col-6"><label for="password">Password</label><input type="password" placeholder="Input Password"
-                    id="password" class="form-control" /></div>
-            <div class="form-group col-6"><label for="Confirm">Password</label><input type="Password" placeholder="Re-enter Password"
-                    id="Confirm" class="form-control" /></div>
+            <div class="form-group col-6"><label for="EmailC">Email</label><input type="text" placeholder="Input Email"
+                    id="EmailC" class="form-control" /></div>
+            <div class="form-group col-6"><label for="passwordC">Password</label><input type="password" placeholder="Input Password"
+                    id="passwordC" class="form-control" /></div>
+            <div class="form-group col-6"><label for="ConfirmC">Password</label><input type="Password" placeholder="Re-enter Password"
+                    id="ConfirmC" class="form-control" /></div>
             <div class=""></div>
             <hr />
             <div class="">
@@ -100,9 +100,9 @@
                 <hr />
 
                 <div class=row>
-                    <div class="col form-group col-2">
-                        <label for="title1">Title</label>
-                        <select class="form-control" id="title1">
+                    <div class="col form-group col-3">
+                        <label for="title1C">Title</label>
+                        <select class="form-control" id="title1C">
 
                             <option>Mr.</option>
                             <option>Mrs.</option>
@@ -110,35 +110,35 @@
                             <option>Miss</option>
                         </select>
                     </div>
-                    <div class="form-group col-5"><label for="Firstname">First Name</label><input type="text"
-                            placeholder="Enter First Name" id="Firstname" class="form-control" /></div>
-                    <div class="form-group col-5"><label for="Surname">Surname</label><input type="text" placeholder="Enter Surname"
-                            id="Surname" class="form-control" /></div>
+                    <div class="offset-1 form-group col-4"><label for="FirstnameC">First Name</label><input type="text"
+                            placeholder="Enter First Name" id="FirstnameC" class="form-control" /></div>
+                    <div class="form-group col-4"><label for="SurnameC">Surname</label><input type="text" placeholder="Enter Surname"
+                            id="SurnameC" class="form-control" /></div>
                 </div>
-                <div class="row form-group col-6"><label for="phone">Contact Number</label><input type="number"
-                        placeholder="Contact Number" id="phone" class="form-control" /></div>
+                <div class="row form-group col-6"><label for="phoneC">Contact Number</label><input type="number"
+                        placeholder="Contact Number" id="phoneC" class="form-control" /></div>
                 <div class="row">
-                    <div class="col form-group col-4"><label for="Country">Country</label><select id="Country" class="form-control">
+                    <div class="col form-group col-4"><label for="CountryC">Country</label><select id="CountryC" class="form-control">
                             <option>Country. . .</option>
                             <option>Australia</option>
                             <option>New Zealand</option>
                             <option>North America</option>
                         </select></div>
-                    <div class="col form-group col-4"><label for="Region">Region</label><input type="text" placeholder="Enter region"
-                            id="Region" class="form-control" /></div>
-                    <div class="col form-group col-4"><label for="city">City</label><input type="text" placeholder="Enter City"
-                            id="city" class="form-control" /></div>
+                    <div class="col form-group col-4"><label for="RegionC">Region</label><input type="text" placeholder="Enter region"
+                            id="RegionC" class="form-control" /></div>
+                    <div class="col form-group col-4"><label for="cityC">City</label><input type="text" placeholder="Enter City"
+                            id="cityC" class="form-control" /></div>
                 </div>
                 <div class="row">
-                    <div class="col form-group col-4"><label for="suburb">Suburb</label><input type="text" placeholder="Enter Suburb"
-                            id="suburb" class="form-control" /></div>
-                    <div class="col form-group col-2"><label for="Postcode">Postcode</label><input type="text"
-                            placeholder="Postcode" id="Postcode" class="form-control" /></div>
+                    <div class="col form-group col-4"><label for="suburbC">Suburb</label><input type="text" placeholder="Enter Suburb"
+                            id="suburbC" class="form-control" /></div>
+                    <div class="col form-group col-2"><label for="PostcodeC">Postcode</label><input type="text"
+                            placeholder="Postcode" id="PostcodeC" class="form-control" /></div>
                 </div>
-                <div class="row form-group col-9"><label for="Address">Address</label><textarea class="form-control"
-                        rows="5" id="Address"></textarea></div>
-                <label for="Purpose">Purpose of the account</label>
-                <div id="Purpose">
+                <div class="row form-group col-9"><label for="AddressC">Address</label><textarea class="form-control"
+                        rows="5" id="AddressC"></textarea></div>
+                <label for="PurposeC">Purpose of the account</label>
+                <div id="PurposeC">
                     <div>
                         <label><input type="radio" name="Purpose" checked> Personal</label>
                     </div>
@@ -147,17 +147,16 @@
                     </div>
                 </div><br />
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="Privacy">
-                    <label class="form-check-label small text-left" for="Privacy">By checking this box it means that
-                        you are agreeing with our Privacy Policy</label>
+                    <input type="checkbox" class="form-check-input" id="PrivacyC">
+                    <label class="form-check-label small text-left" for="PrivacyC">By checking this box it means that
+                        you are agreeing with our <a href="/privacy.php">Privacy Policy</a></label>
                 </div>
                 <div class="d-flex flex-row pb-5"></div>
-                <input type="button" class="btn btn-info offset-10 col-2" Value="Register">
+                <input type="button" class="btn btn-info offset-10 col-2" Value="Register" id="RegisterC" disabled>
                 <div class="d-flex flex-row pb-2"></div>
         </form>
 
     </div>
-    <div class=""></div>
 
 </main>
 <!-- main end -->

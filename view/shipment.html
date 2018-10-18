@@ -10,6 +10,8 @@
 
                 <a class="nav-link <?php if($item == 2) {echo 'active';} ?>" id="v-pills-rates-tab" data-toggle="pill"
                     href="#v-pills-rates" role="tab" aria-controls="v-pills-rates" aria-selected="false">Rates</a>
+                <a class="nav-link <?php if($item == 3) {echo 'active';} ?>" id="v-pills-information-tab" data-toggle="pill"
+                    href="#v-pills-information" role="tab" aria-controls="v-pills-information" aria-selected="false">Information</a>
             </div>
         </div>
         <div class="col-md-9">
@@ -44,22 +46,11 @@
                         </li>
                         <br />
                         <li class="media pb-5">
-                            <img class="mr-3 col-md-4 col-5" src="./img/Card2.png" alt="Service2">
-                            <div class="media-body col-md-6 col-sm-6">
-                                <h5 class="mt-0 mb-1">Supermail 2</h5>
-                                <ul>
-                                    <li>3 Days Delivery</li>
-                                    <li>maximum weight 25 kg</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <br />
-                        <li class="media pb-5">
                             <img class="mr-3 col-md-4 col-5" src="./img/Card3.png" alt="Service2">
                             <div class="media-body col-md-6 col-sm-6">
                                 <h5 class="mt-0 mb-1">Supermail Reguler</h5>
                                 <ul>
-                                    <li>5-7 Days delivery</li>
+                                    <li>3-7 Days delivery</li>
                                     <li>maximum weight 25 kg</li>
                                 </ul>
                             </div>
@@ -105,7 +96,8 @@
                             <label for="weight" class="col-sm-2 col-form-label">Weight:</label>
                             <div class="col-sm-8">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="weight" id="weight" placeholder="Weight" v-model="weight">
+                                    <input type="text" class="form-control" name="weight" id="weight" placeholder="Weight"
+                                        v-model="weight">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">kg</div>
                                     </div>
@@ -118,6 +110,111 @@
                     <p v-text="quoteResult"></p>
                     <p>There are two types of ticket, near and far. Which type is available depends on the distance.</p>
                 </div>
+                <!--Information Start-->
+                <div class="tab-pane fade <?php if($item == 3) {echo 'show active';} ?>" id="v-pills-information" role="tabpanel"
+                    aria-labelledby="v-pills-information-tab">
+                    <!--start from here-->
+                    <div class="container pb-5">
+                        <h2>General Information</h2>
+                        <hr />
+
+                        <span class="lead">All information that you might need to know when transfering your goods</span>
+
+                        <!--computer-->
+                        <div class="d-none d-md-flex">
+                            <div class="card-group mt-5">
+                                <div class="card">
+                                    <img class="container card-img-top col-md-9 col-lg-6 pt-2" src="./img/officer.png"
+                                        style="max-height: 170px;" alt="Card image cap">
+                                    <div class="card-body text-center pb-5">
+                                        <h5 class="card-title">Clearing Custom</h5>
+                                        <p class="card-text text-left">
+                                            Know what kind of things that you have to prepare for the custom when
+                                            transferring your goods internationally
+                                        </p>
+                                        <div class="row justify-content-end"><a href="/custom.php" class="btn btn-primary ">More
+                                                Info</a></div>
+                                    </div>
+                                </div>
+
+                                <div class="card pb-5">
+                                    <img class="card-img-top container col-md-9 col-lg-6 pt-5" src="./img/ProhibitedGoods.png"
+                                        style="max-height: 170px;" alt="Card image cap">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Prohibited Goods</h5>
+                                        <p class="card-text text-left">
+                                            Are you shipping internationally? Then you have to know what items are
+                                            prohibited / Restricted in other country.
+                                        </p>
+                                        
+                                        <div class="row justify-content-end"><a href="/prohibited.php" class="btn btn-primary">More
+                                                Info</a></div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img class="card-img-top container col-md-9 col-lg-6 pt-5" src="./img/boxes.png"
+                                        style="max-height: 170px;" alt="Card image cap">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Pack your goods</h5>
+                                        <p class="card-text text-left">
+                                            Learn how to pack your own boxes properly. It could reduce the chance of
+                                            your
+                                            items being damaged during shipment.
+                                        </p>
+                                        <div class="row justify-content-end"><a href="/packing.php" class="btn btn-primary">More
+                                                Info</a></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--Mobile-->
+                        <div class="d-md-none">
+                            <div class="container col-10">
+                                <div class="card pt-3">
+                                    <img class="card-img-top offset-3 col-6" src="./img/officer.png" style="max-height: 190px;"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Clearing Custom</h5>
+                                        <p class="card-text">
+                                            Know what kind of things that you have to prepare for the custom when
+                                            transferring your goods internationally
+                                        </p>
+                                        <a href="/custom.php" class="btn btn-primary">More Info</a>
+                                    </div>
+                                </div>
+                                <div class="card pt-3 mt-3">
+                                    <img class="card-img-top offset-3 col-6" src="./img/ProhibitedGoods.png" style="max-height:190px"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Prohibited Goods</h5>
+                                        <p class="card-text">
+                                            Are you shipping internationally? Then you have to know what items are
+                                            prohibited / Restricted in other country.
+                                        </p>
+                                        <a href="/prohibited.php" class="btn btn-primary">More Info</a>
+                                    </div>
+                                </div>
+                                <div class="card pt-3 mt-3">
+                                    <img class="card-img-top offset-3 col-6" src="./img/boxes.png" style="max-height:190px"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pack your Goods</h5>
+                                        <p class="card-text">
+                                            Learn how to pack your own boxes properly. It could reduce the chance of
+                                            your
+                                            items being damaged during shipment.
+                                        </p>
+                                        <a href="/packing.php" class="btn btn-primary">More Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--endhere-->
+                </div>
+                <!--Information End-->
             </div>
         </div>
     </div>

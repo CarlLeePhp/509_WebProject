@@ -12,7 +12,15 @@ include './view/footer.html';
 // JS for this page should be writen after here.
 ?>
 
+<script>
+document.getElementById('Privacy').onchange = function () {
+    document.getElementById('Register').disabled = !this.checked;
+};
 
+document.getElementById('PrivacyC').onchange = function () {
+    document.getElementById('RegisterC').disabled = !this.checked;
+};
+</script>
 
 
 </body>

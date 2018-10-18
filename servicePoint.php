@@ -1,6 +1,6 @@
 <?php
 // This header.html include the content from DOCTYPE to the end of navigation.
-include 'header.html';
+include './view/header.html';
 ?>
 <!-- Mobile -->
 <main class="container-fluid  d-md-none">
@@ -50,8 +50,12 @@ include 'header.html';
             <button type="submit" class="btn btn-primary">Find</button>
         </form>
         <div class="d-flex flex-column justify-content-center align-items-center border" style="height:500px;">
-            <h4>Google Map</h4>
-            <p>Showing the close Service Point Depot to Customer on the map.</p>
+            <!--The div element for the map -->
+            <div class="gmap_canvas container-fluid mb-5">
+                <iframe width="320" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=sit%20invercargill&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0"
+                    marginwidth="0"></iframe><br /><a class="small text-muted" href="https://www.pureblack.de"> web Reference :
+                    website erstellen lassen</a>
+            </div>
         </div>
     </div>
 </div>
@@ -65,7 +69,7 @@ include 'header.html';
 
 <?php
 // This footer.html include footer and JS libs.
-include 'footer.html';
+include './view/footer.html';
 
 // JS for this page should be writen after here.
 ?>
