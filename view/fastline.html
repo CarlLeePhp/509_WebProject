@@ -30,7 +30,7 @@ Breadcrumb End -->
     </div>
     <br>
     <!-- nav nav-pills mb-3 d-flex flex-row justify-content-around -->
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <ul class="nav nav-pills mb-3 d-none" id="pills-tab" role="tablist">
         <li class="nav-item text-center">
             <a class="nav-link active" id="pills-origin-tab" data-toggle="pill" href="#pills-origin" role="tab"
                 aria-controls="pills-origin" aria-selected="true">ORIGIN</a>
@@ -446,10 +446,26 @@ Breadcrumb End -->
             <div class="d-flex flex-row">
                 <div class="col-md-3 bg-dark text-light d-flex flex-column">
                     <p class="display-5 mx-auto mt-3">PAYMENT SUMMARY</p>
-                    <p> {{ deliverySpeeds[shipment.deliverySpeedID].name}} Price: {{ rates.basicPrice }}</p>
-                    <p>Extra Serivce: {{ rates.extraPrice}} </p>
-                    <p>Total Price: {{ rates.totalPrice }} </p>
-                    <p>GST INC.: {{ rates.GST }} </p>
+                    <div class="row">
+
+                        <p class="col-md-8"> {{ deliverySpeeds[shipment.deliverySpeedID].name}} Price: </p>
+                        <p class="col-md-4">NZ$ {{ rates.basicPrice }}</p>
+                    </div>
+
+                    <div class="row">
+                        <p class="col-md-8">Extra Serivce: </p>
+                        <p class="col-md-4">NZ$ {{ rates.extraPrice}} </p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-8">GST: </p>
+                        <p class="col-md-4">NZ$ {{ rates.GST }}</p>
+                    </div>
+                    <div class="row border-top border-white m-2"></div>
+                    <div class="row">
+                        <p class="col-md-8">Total Price: </p>
+                        <p class="col-md-4">NZ$ {{ rates.totalPrice }}</p>
+                    </div>
+
                     <a href="/fastline.php" class="btn btn-warning mx-auto">Cancel</a>
 
                 </div>
@@ -507,7 +523,7 @@ Breadcrumb End -->
                 </div>
 
             </div>
-            
+
 
         </div>
         <!-- Payment End -->
