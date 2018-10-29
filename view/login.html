@@ -2,27 +2,27 @@
 <main id="main">
     <div class="container d-md-none col-sm-7 mb-5 pb-5">
         <Div class="d-flex flex-row flex-column pt-5"></Div>
-        <legend class="text-center">Log In</legend>
+        <h3 class="text-center">Log In</h3>
 
         <div class="p-3 text-capitalize">
 
             <div class="form-group">
                 <Div class="d-flex flex-row flex-column pt-2"></Div>
 
-                <label for="InputEmail1">Email address</label>
+                <label for="InputEmail1m">Email address</label>
                 <input type="email" class="form-control" id="InputEmail1m" aria-describedby="emailHelp" placeholder="Enter email">
 
             </div>
             <div class="form-group">
-                <label for="InputPassword1">Password</label>
+                <label for="InputPassword1m">Password</label>
                 <input type="password" class="form-control" id="InputPassword1m" placeholder="Password">
             </div>
             <div class="d-flex flex-row flex-column pt-2"></div>
-            <Div class="d-flex flex-row flex-column "><a href="login.html"><input type="button" class="btn btn-outline-success col-12"
-                        value="Login Into Your Account" /></a></Div>
+            <Div class="d-flex flex-row flex-column "><input type="button" class="btn btn-outline-success col-12"
+                value="Login Into Your Account" @click="btnHandler" /></Div>
             <Div class="d-flex flex-row flex-column pt-2"></Div>
-            <Div class="d-flex flex-row flex-column mb-3"><a href="signup.html"><input type="button" class="btn btn-outline-primary col-12"
-                        value="Sign Up" /></a></Div>
+            <Div class="d-flex flex-row flex-column mb-3"><a href="/signup.php" class="btn btn-outline-primary col-12"
+                >Sign Up</a></Div>
             <div class="small  text-capitalize ">
 
                 <a style="color: black" href="#">
@@ -41,26 +41,26 @@
         <form class="col-md-12 col-xl-8 pt-5">
             <div class="d-flex flex-row mt-xl-3"></div>
             <div class="d-flex flex-row mt-5"></div>
-            <legend>Log In</legend>
+            <h3>Log In</h3>
             <div class="p-3 shadow-lg rounded text-capitalize">
 
                 <div class="form-group">
                     <Div class="d-flex flex-row flex-column pt-2"></Div>
 
-                    <label for="InputEmail1">Email address</label>
+                    <label for="InputEmail1c">Email address</label>
                     <input type="email" class="form-control" id="InputEmail1c" v-model="email" aria-describedby="emailHelp" placeholder="Enter email">
 
                 </div>
                 <div class="form-group">
-                    <label for="InputPassword1">Password</label>
+                    <label for="InputPassword1c">Password</label>
                     <input type="password" class="form-control" id="InputPassword1c" v-model="password" placeholder="Password">
                 </div>
                 <div class="d-flex flex-row flex-column pt-3"></div>
                 <Div class="d-flex flex-row flex-column"><input type="button" class="btn btn-outline-success col-12"
                             value="Login Into Your Account" @click="btnHandler" /></Div>
                 <Div class="d-flex flex-row flex-column pt-2"></Div>
-                <Div class="d-flex flex-row flex-column mb-3"><a href="/signup.php"><input type="button" class="btn btn-outline-primary col-12"
-                            value="Sign Up" /></a></Div>
+                <Div class="d-flex flex-row flex-column mb-3"><a href="/signup.php" class="btn btn-outline-primary col-12"
+                            >Sign Up</a></Div>
                 <div class="small  text-capitalize">
                     <a style="color: black" href="/forgotPass.php">
 

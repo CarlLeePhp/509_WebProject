@@ -35,15 +35,9 @@ include '../conf_supermail.php';
         })
 
         // I do not want to use jQuery, but I can not find how to address it by Vue.js
-        $("#IDc").keyup(function(event) {
+        $("#packageID").keyup(function(event) {
             if (event.keyCode === 13){
-                $("#btnc").click();
-            }
-        });
-
-        $("#IDm").keyup(function(event) {
-            if (event.keyCode === 13){
-                $("#btnm").click();
+                $("#btn").click();
             }
         });
     </script>

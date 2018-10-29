@@ -93,7 +93,7 @@ Breadcrumb End -->
                         <label for="city" class="form-label">City*:</label>
                         <select name="city" id="city" class="form-control" v-model="sender.city">
                             <option value="">Please choose a city...</option>
-                            <option v-for="place in places" :value="place.id">{{place.name}}</option>
+                            <option v-for="place in places" :value="place.id" :key="place.id">{{place.name}}</option>
                         </select>
                     </div>
                     <div class="col-md-4 form-group">
@@ -237,13 +237,9 @@ Breadcrumb End -->
                 <input type="text" name="noPackage" id="noPackage" class="form-control col-md-3" v-model="packageInformation.number">
             </div>
             <div class="form-group form-inline">
-                <label for="weight" class="form-label col-md-3">Weight</label>
-                <input type="text" name="weight" id="weight" class="form-control col-md-2" v-model="packageInformation.weight">
-                <select class="form-control col-md-1 ml-2">
-                    <option value="1">kg</option>
-                    <option value="2">ton</option>
-                    <option value="3">Anyway</option>
-                </select>
+                <label for="weight" class="form-label col-md-3">Weight (kg)</label>
+                <input type="text" name="weight" id="weight" class="form-control col-md-3" v-model="packageInformation.weight">
+            
             </div>
             <div class="form-group form-inline">
                 <div class="form-check offset-md-3">
@@ -267,7 +263,7 @@ Breadcrumb End -->
         <!-- Shipment Start -->
         <div class="border p-2 tab-pane fade " id="pills-shipment" role="tabpanel" aria-labelledby="pills-shipment-tab">
             <h4>Shipment</h4>
-            <form action="">
+            <form>
                 <div class="form-group row">
                     <label for="orderNo" class="offset-sm-1 col-sm-2">1. Order NO:</label>
                     <div class="col-sm-4">
@@ -366,19 +362,19 @@ Breadcrumb End -->
         <div class="border p-2 tab-pane fade " id="pills-rates" role="tabpanel" aria-labelledby="pills-rates-tab">
             <h4>DELIVERY RATES</h4>
             <div class="row">
-                <p class="offset-md-1 col-md-2">1. Order No: </p>
+                <p class="offset-md-1 col-md-3">1. Order No: </p>
                 <p class="col-md-6" v-text="shipment.orderNo"></p>
             </div>
             <!-- Sender Information -->
             <div class="row">
-                <p class="offset-md-1 col-md-2">2. Origin Package: </p>
+                <p class="offset-md-1 col-md-3">2. Origin Package: </p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">Sender: </p>
+                <p class="offset-md-1 col-md-3 text-right">Sender: </p>
                 <p class="col-md-6" v-text="sender.name"></p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">Address: </p>
+                <p class="offset-md-1 col-md-3 text-right">Address: </p>
                 <p class="col-md-6" v-text="sender.street + ', ' + sender.apartment + ', ' + sender.department"></p>
             </div>
             <div class="row">
@@ -388,14 +384,14 @@ Breadcrumb End -->
 
             <!-- Dest Information -->
             <div class="row">
-                <p class="offset-md-1 col-md-2">3. Destination: </p>
+                <p class="offset-md-1 col-md-3">3. Destination: </p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">Recipient: </p>
+                <p class="offset-md-1 col-md-3 text-right">Recipient: </p>
                 <p class="col-md-6" v-text="dest.name"></p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">Address: </p>
+                <p class="offset-md-1 col-md-3 text-right">Address: </p>
                 <p class="col-md-6" v-text="dest.street + ', ' + dest.apartment + ', ' + dest.department"></p>
             </div>
             <div class="row">
@@ -405,31 +401,31 @@ Breadcrumb End -->
 
             <!-- Delivery Detail -->
             <div class="row">
-                <p class="offset-md-1 col-md-2">4. Delivery Detail: </p>
+                <p class="offset-md-1 col-md-3">4. Delivery Detail: </p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">Package Number: </p>
+                <p class="offset-md-1 col-md-3 text-right">Package Number: </p>
                 <p class="col-md-6" v-text="packageInformation.number"></p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">Weight: </p>
+                <p class="offset-md-1 col-md-3 text-right">Weight: </p>
                 <p class="col-md-6" v-text="packageInformation.weight + 'kg'"></p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">Delivery Speed Type:</p>
+                <p class="offset-md-1 col-md-3 text-right">Delivery Speed Type:</p>
 
-                <p class="col-md-2" v-text="'NZ$ ' + rates.basicPrice + '(' + deliverySpeeds[shipment.deliverySpeedID].name + ')'"></p>
+                <p class="col-md-6" v-text="'NZ$ ' + rates.basicPrice + '(' + deliverySpeeds[shipment.deliverySpeedID].name + ')'"></p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">Extra Price:</p>
+                <p class="offset-md-1 col-md-3 text-right">Extra Price:</p>
                 <p class="col-md-6" v-text="'NZ$ ' + rates.extraPrice"></p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">GST (10%):</p>
+                <p class="offset-md-1 col-md-3 text-right">GST (10%):</p>
                 <p class="col-md-6" v-text="'NZ$ ' + rates.GST"></p>
             </div>
             <div class="row">
-                <p class="offset-md-1 col-md-2 text-right">Total Price:</p>
+                <p class="offset-md-1 col-md-3 text-right">Total Price:</p>
                 <p class="col-md-6" v-text="'NZ$ ' + rates.totalPrice"></p>
             </div>
 
