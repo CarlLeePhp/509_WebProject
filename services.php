@@ -33,7 +33,7 @@ include './view/header.html';
                 <div class="tab-pane fade <?php if($item == 1) {echo 'show active';} ?>" id="v-pills-super" role="tabpanel" aria-labelledby="v-pills-super-tab">
                     <!--start from here-->
                     <div class="container">
-                        <img src="./img/bannerSS.png" class="col-12" />
+                        <img src="./img/bannerSS.png" class="col-12" alt="Banner"/>
                         
                         <h2 class="p-5">Super Service</h2>
                         <p class="col-12"> From Export to import and domestic service , super mail offers huge range of service delivery options. Find a delivery option that are suitable for you below</p>
@@ -41,7 +41,7 @@ include './view/header.html';
                         
                         
                         <div class="jumbotron-fluid col-12">
-                            <legend class="text-center">International Service</legend>
+                            <h3 class="text-center">International Service</h3>
                             <div class="row container"><div class="card-header bg-secondary rounded-top col-6 text-center text-white">Fastest</div><div class="card-header rounded-top bg-secondary col-6 text-center text-white">Best Price</div></div>
                             <div class="row container"><div class=" card-header border-right bg-light col-6"><ul><li>Arriving in the next possible day</li><li>Using Air Service</li><li>Maximum individual weight 25 KG</li></ul></div><div class=" card-header bg-light col-6"><ul><li>Arriving within 3-7 days</li><li>no maximum weight</li></ul></div>
                                 
@@ -49,7 +49,7 @@ include './view/header.html';
                             </div>
                         </div>
                         <div class="jumbotron-fluid col-12">
-                            <legend class="text-center">Domestic Service</legend>
+                            <h3 class="text-center">Domestic Service</h3>
                             <div class="row container"><div class="card-header bg-warning border-dark rounded-top col-6 text-center">Fastest</div><div class="card-header rounded-top  border-dark bg-warning col-6 text-center">Best Price</div></div>
                             <div class="row container"><div class=" card-header border-right bg-light col-6"><ul><li>Arriving in the same day</li><li>Using Air Service</li><li>Maximum individual weight 25 KG</li></ul></div><div class=" card-header bg-light col-6"><ul><li>Arriving within 1-7 days</li><li>no maximum weight</li></ul></div>
                                 
@@ -63,7 +63,7 @@ include './view/header.html';
                     <!--start from here-->
 
                         <div class="container">
-                            <img src="./img/FreightBanner.jpg" class="col-12" />
+                            <img src="./img/FreightBanner.jpg" class="col-12" alt="Banner" />
                             
                                 <h2 class="p-5">Freight Service</h2>
 
@@ -84,7 +84,7 @@ include './view/header.html';
                                             <li>Packing And Crating</li>
                                         </ul>
                                     </Dd>
-                                    <br />
+                                    
                                     <dt>Air Freight Service</dt>
                                     <dd>
                                         <p>
@@ -124,7 +124,7 @@ include './view/header.html';
                             <div class="col-md-4 mt-3 pb-sm-2 pb-md-0 "><img class="col-12 " src="./img/DoortoDoorservice.png"
                                     alt="doortodoor"></div>
                             <div class="card col-md-8 mt-3">
-                                <legend>Door-To-Door Service</legend>
+                                <h3>Door-To-Door Service</h3>
                                 <hr />
                                 <div class="card-body"> Supermail provides a door to door service if you feel the need
                                     of the package to be received in person. it will nullify the chance of the package
@@ -133,7 +133,7 @@ include './view/header.html';
                             <div class="col-md-4 mt-5 pb-sm-2 pb-md-0 "><img class="col-12 " src="./img/Repacking.png"
                                     alt="Repacking"></div>
                             <div class="card col-md-8 mt-5">
-                                <legend>Repacking</legend>
+                                <h3>Repacking</h3>
                                 <hr />
                                 <div class="card-body"> Do you need us to help you to pack your items? do not worry .
                                     We do have service for that.</div>
@@ -141,7 +141,7 @@ include './view/header.html';
                             <div class="col-md-4 mt-5 pb-sm-2 pb-md-0 "><img class="col-12 " src="./img/Safe.png"
                                     alt="Extra Security"></div>
                             <div class="card col-md-8 mt-5">
-                                <legend>Extra Security</legend>
+                                <h3>Extra Security</h3>
                                 <hr />
                                 <div class="card-body">For Things that need extra security like Hazardrous goods and
                                     Fragile items . We will provide a service to make sure the items are handled as
@@ -150,7 +150,7 @@ include './view/header.html';
                             <div class="col-md-4 mt-5 pb-sm-2 pb-md-0 "><img class="col-12 " src="./img/Time.png"
                                     alt="Arrange time"></div>
                             <div class="card col-md-8 mt-5">
-                                <legend>Arrange Time</legend>
+                                <h3>Arrange Time</h3>
                                 <hr />
                                 <div class="card-body">Do you have a requirement for when the recepient would receive
                                     their items? Just tell us and we will arrange it for you </div>
