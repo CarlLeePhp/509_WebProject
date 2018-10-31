@@ -51,9 +51,9 @@
                                             <h5 class="card-title">FrequentlyAskedQuestions</h5>
                                             <p class="card-text">Some of your questions may have been answered in the
                                                 past. Why don't you try looking at it first</p>
-                                            
-                                                <a class="btn btn-primary mt-auto" onclick="toFAQ">Check Here</a>
-                                            
+
+                                            <a class="btn btn-primary mt-auto text-light" @click="toFAQ">Check Here</a>
+
                                         </div>
                                     </div>
                                     <div class="card col-lg-5 col-md-8 mr-sm-4 mr-lg-0">
@@ -61,30 +61,13 @@
                                         <div class="card-body d-flex flex-column">
                                             <h5 class="card-title">Send Us a Message</h5>
                                             <p class="card-text">Send us your message or query regarding our services.</p><br>
-                                            
-                                                <a href="/messageUs.php" class="btn btn-primary mt-auto">Click Here</a>
-                                            
+
+                                            <a href="/messageUs.php" class="btn btn-primary mt-auto">Click Here</a>
+
                                         </div>
                                     </div>
                                 </div>
-                                <hr />
-                                <div class="offset-sm-1 offset-md-0 pb-5">
-                                    <div class="container-fluid row justify-content-around">
-                                        <a href="./achievement.html" class="text-dark">
-                                            <img class="col-9 d-flex row" src="./img/throphy.png" alt="achievementpage" />Our
-                                            Achievement
-                                        </a>
-                                        <a href="./Aboutus.html" class="text-dark">
-                                            <img class="col-9 d-flex row" src="./img/aboutUS.png" alt="AboutUS"><span
-                                                class="offset-1">Our Company</span>
-                                        </a>
-                                        <a href="./OurCustomer.html" class="text-dark">
-                                            <img class="col-9 d-flex row" src="./img/aboutUS.png" alt="ourcustomerpage"><span
-                                                class="offset-1">Our Customer</span>
-                                        </a>
-                                    </div>
 
-                                </div>
 
                             </div>
                         </div>
@@ -126,7 +109,7 @@
                                             <h5 class="card-title text-center">FrequentlyAskedQuestions</h5>
                                             <p class="card-text">Some of your questions may have been answered in the
                                                 past. Why don't you try looking at it first</p>
-                                            <a href="#" class="btn btn-primary" onclick="toFAQ">Check Here</a>
+                                            <a href="#" class="btn btn-primary" @click="toFAQ">See FAQ</a>
                                         </div>
                                     </div>
                                     <div class="card mr-lg-0">
@@ -134,28 +117,12 @@
                                         <div class="card-body">
                                             <h5 class="card-title text-center">Send Us a Message</h5>
                                             <p class="card-text">Send us your feedback or query regarding our services.</p>
-                                            <a href="/messageUs.php" class="btn btn-primary">Click Here</a>
+                                            <a href="/messageUs.php" class="btn btn-primary">Send message</a>
                                         </div>
                                     </div>
                                 </div>
-                                <hr />
-                                <div class="offset-sm-1 offset-md-0 pb-5">
-                                    <div class="container-fluid row justify-content-around">
-                                        <a href="./achievement.html" class="text-dark">
-                                            <img class="col-9 d-flex row" src="./img/throphy.png" alt="achievementpage" />Our
-                                            Achievement
-                                        </a>
-                                        <a href="./Aboutus.html" class="text-dark">
-                                            <img class="col-9 d-flex row" src="./img/aboutUS.png" alt="AboutUS"><span
-                                                class="offset-1">Our Company</span>
-                                        </a>
-                                        <a href="./OurCustomer.html" class="text-dark">
-                                            <img class="col-9 d-flex row" src="./img/aboutUS.png" alt="ourcustomerpage"><span
-                                                class="offset-1">Our Customer</span>
-                                        </a>
-                                    </div>
 
-                                </div>
+
 
                             </div>
                         </div>
@@ -172,8 +139,8 @@
 
 
 
-                        <button class="btn border-0 bg-transparent d-block text-left" style="white-space: normal" type="button" data-toggle="collapse"
-                            data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <button class="btn border-0 bg-transparent d-block text-left" style="white-space: normal" type="button"
+                            data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                             <span class="oi oi-chevron-bottom"> &nbsp; How are price calculated?</span>
                         </button>
 
@@ -185,22 +152,26 @@
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button class="btn border-0 bg-transparent d-block text-left" style="white-space: normal" type="button" data-toggle="collapse"
-                                data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                            <button class="btn border-0 bg-transparent d-block text-left" style="white-space: normal"
+                                type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false"
+                                aria-controls="collapseExample">
                                 <span class="oi oi-chevron-bottom"> &nbsp; How do i track my parcel?</span>
                             </button>
 
                             <div class="collapse" id="collapseExample1">
                                 <div class="card card-body">
-                                    <p>Simply use the ticket that we give it to you and enter the code in the home page.
-                                    We will provide you with the code after your items are received in our office </p>
+                                    <p>Simply use the ticket that we give it to you and enter the code in the home
+                                        page.
+                                        We will provide you with the code after your items are received in our office
+                                    </p>
 
                                 </div>
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button class="btn border-0 bg-transparent d-block text-left" style="white-space: normal" type="button" data-toggle="collapse"
-                                data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                            <button class="btn border-0 bg-transparent d-block text-left" style="white-space: normal"
+                                type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false"
+                                aria-controls="collapseExample">
                                 <span class="oi oi-chevron-bottom"> &nbsp; How do i rearrange a delivery of the
                                     shipment?</span>
                             </button>
@@ -208,17 +179,20 @@
                             <div class="collapse" id="collapseExample2">
                                 <div class="card card-body">
                                     <p>If the package has delivered into the destination then you have to re-use our
-                                    delivery process and attempt the delivery.
-                                    If the package is still hasn't delivered yet . you could contact our service and we
-                                    will arrange it to your desired place. <span class="text-truncate">extra charge may
-                                        apply</span></p>
+                                        delivery process and attempt the delivery.
+                                        If the package is still hasn't delivered yet . you could contact our service
+                                        and we
+                                        will arrange it to your desired place. <span class="text-truncate">extra charge
+                                            may
+                                            apply</span></p>
 
                                 </div>
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button class="btn border-0 bg-transparent d-block text-left pt-2" style="white-space: normal" type="button" data-toggle="collapse"
-                                data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                            <button class="btn border-0 bg-transparent d-block text-left pt-2" style="white-space: normal"
+                                type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false"
+                                aria-controls="collapseExample">
                                 <span class="oi oi-chevron-bottom"> &nbsp; What goods are considered Dangerous?</span>
                             </button>
 
@@ -232,8 +206,9 @@
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button class="btn border-0 bg-transparent d-block text-left pt-2" style="white-space: normal" type="button" data-toggle="collapse"
-                                data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                            <button class="btn border-0 bg-transparent d-block text-left pt-2" style="white-space: normal"
+                                type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false"
+                                aria-controls="collapseExample">
                                 <span class="oi oi-chevron-bottom"> &nbsp; Is my shipment covered by insurance?</span>
                             </button>
 
@@ -249,8 +224,9 @@
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button class="btn border-0 bg-transparent d-block pt-2 text-left" style="white-space: normal" type="button" data-toggle="collapse"
-                                data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+                            <button class="btn border-0 bg-transparent d-block pt-2 text-left" style="white-space: normal"
+                                type="button" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false"
+                                aria-controls="collapseExample">
                                 <span class="oi oi-chevron-bottom"> &nbsp; How do i file a complaint for damaged/lost
                                     items?</span>
                             </button>
@@ -263,8 +239,9 @@
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button class="btn border-0 bg-transparent d-block pt-2 text-left" style="white-space: normal" type="button" data-toggle="collapse"
-                                data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample">
+                            <button class="btn border-0 bg-transparent d-block pt-2 text-left" style="white-space: normal"
+                                type="button" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false"
+                                aria-controls="collapseExample">
                                 <span class="oi oi-chevron-bottom"> &nbsp; Would i receive help on packing my items?</span>
                             </button>
 

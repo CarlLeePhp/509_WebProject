@@ -16,9 +16,12 @@ $password = $_GET['password'];
 // SQL
 $query = "SELECT password FROM users WHERE email = '" . $email . "'";
 
+// SQL Injection
+// INSERT INTO USER (email, password) VALUEs ('bcd@supermail.com', '111');
+
 // query
 if(!$result = $db->query ($query)) {
-    echo "Can not query";
+    echo "Wrong email or password.";
     $db->close();
     exit;
 }

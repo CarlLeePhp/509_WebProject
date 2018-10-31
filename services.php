@@ -113,7 +113,7 @@ include './view/header.html';
                 </div>
                 <div class="tab-pane fade <?php if($item == 3) {echo 'show active';} ?>" id="v-pills-updates" role="tabpanel" aria-labelledby="v-pills-updates-tab">
                     <h4>Updates</h4>
-                    <p>Customer could do something, Customer could do something, Customer could do something.</p>
+                    <p>30/10/2018 Supermail website was created</p>
                 </div>
                 <div class="tab-pane fade <?php if($item == 4) {echo 'show active';} ?>" id="v-pills-extraService" role="tabpanel" aria-labelledby="v-pills-extraService-tab">
                     <!--start from here-->
