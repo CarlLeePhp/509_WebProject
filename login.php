@@ -17,7 +17,8 @@ include './view/footer.html';
             data: {
                 email: "",
                 password: "",
-                result: ""
+                result: "",
+                messageColor:"text-danger"
             },
             methods: {
                 // Onclick event for the button
@@ -29,7 +30,12 @@ include './view/footer.html';
                         this.result = res.body
                     }, res => {
                         this.result = res
-                    })             
+                    })
+
+                    // if it is Welcome
+                    if (this.result.search('Welcome')) {
+                        this.messageColor = 'text-success'
+                    }           
                 }
             }
         })
