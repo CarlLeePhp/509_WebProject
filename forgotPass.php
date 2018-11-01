@@ -12,17 +12,7 @@ include './view/footer.html';
 ?>
 
 <script>
-    // for computer, erreohd
-    //document.getElementById("send1").addEventListener("click", function(event){
-    //   event.preventDefault();
-    //    document.getElementById('errorhd').hidden = false
-    //});
 
-    // for mobile, errorhm
-    //document.getElementById("send").addEventListener("click", function(event){
-    //    event.preventDefault();
-    //    document.getElementById('errorhm').hidden = false
-    //});
 
 
 </script>
