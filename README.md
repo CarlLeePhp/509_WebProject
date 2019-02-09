@@ -1,9 +1,10 @@
 # 509_WebProject
+## Installation
+1. Copy all files to the root of a web server. 
+2. Copy 'conf_supermail.php' which in the 'configration' fold out of the root of the web server.
+3. Edit 'conf_supermail.php' setting the information of the database used.
 
-## Recording
-
-### 2018-Sep-26
-by Carl
-
-1. Using a type of nav to building Help & Support page looks good.
-2. Adding a class makes the text of nav align the bottom.
+## Database
+The name of the database should be "supermail". There are two tables, package and users.
+package (**ID**, code, message)
+users (**ID**, email, password)
