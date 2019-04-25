@@ -2,7 +2,7 @@
 It is a project for our paper 509.
 ## Installation
 1. Copy all files to the root of a web server. (like: /var/www/html/)
-2. Copy 'conf_supermail.php' which in the 'configration' fold out of the root of the web server.(like: var/www/)
+2. Copy 'conf_supermail.php' which in the 'configration' fold out of the root of the web server.(like: /var/www/)
 3. Edit 'conf_supermail.php' setting the information of the database used.
 
 ## Database
